@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import Image from "next/image";
 
@@ -5,7 +6,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <main id="container" className="border w-5/6">
+      <main id="container" className=" w-5/6">
         <div id="hero-section">
           <Image
             src="/tomas-hero.png"
@@ -22,6 +23,7 @@ export default function Home() {
           <div id="icon-buttons-container"></div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
