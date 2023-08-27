@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import IconButton from "@/components/IconButton";
 import NavBar from "@/components/NavBar";
+import ProjectCard from "@/components/ProjectCard";
 import Image from "next/image";
 
 export default function Home() {
@@ -41,6 +42,30 @@ export default function Home() {
           >
             <p>Recat - Typescript</p>
           </div>
+        </div>
+
+        <div id="about-section" className="mt-20">
+          <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-4">
+            About Me
+          </h3>
+          <p>
+            Desarrollador junior en constante búsqueda de la simplicidad
+            elegante en la programación y el diseño. Mi objetivo es crear
+            conexiones virtuales que inspiren y resuelvan problemas.
+          </p>
+        </div>
+
+        <div id="Portfolio-section" className="mt-20">
+          <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-4">
+            Portfolio
+          </h3>
+          <div className="grid grid-cols-2 gap-2">
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+          </div>
+          <a className="underline pl-2" href="">See more projects</a>
         </div>
       </main>
       <Footer />
