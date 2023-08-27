@@ -1,37 +1,66 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 function NavBar() {
+  const [openMenu, setOpenMenu] = useState(true);
+
   return (
-    <div className="navbar bg-base-100 w-5/6 flex mt-4">
-      <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">
-          <Image
-            src="/Logo.png"
-            alt="Tomas Bohn Guixeras Logo"
-            height={70}
-            width={70}
-          />
-        </a>
-      </div>
-      <div className="flex-none">
-        <button className="btn btn-square btn-ghost h-full w-10">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            className="inline-block w-5 h-5 stroke-current"
+    <>
+      <div className="navbar bg-base-100 w-5/6 flex mt-4 relative">
+        <div className="flex-1">
+          <a className="btn btn-ghost normal-case text-xl">
+            <Image
+              src="/Logo.png"
+              alt="Tomas Bohn Guixeras Logo"
+              height={70}
+              width={70}
+            />
+          </a>
+        </div>
+        <div className="flex-none">
+          <button
+            className="btn btn-square btn-ghost h-full w-8 relative"
+            onClick={() => setOpenMenu((prev) => !prev)}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </button>
+            {!openMenu ? (
+              <Image
+                src="/icons/burger.svg"
+                alt="Open menu icon"
+                height={40}
+                width={40}
+              />
+            ) : (
+              <Image
+                src="/icons/close.svg"
+                alt="Open menu icon"
+                height={40}
+                width={40}
+              />
+            )}
+          </button>
+        </div>
       </div>
-    </div>
+      {openMenu && (
+        <div className="absolute w-full top-14 h-5/6 bg-[#242531] flex flex-col items-center justify-evenly">
+          <div id="sections" className="border flex flex-col w-5/6">
+            <a href="">Services</a>
+            <a href="">Portfolio</a>
+            <a href="">Blog</a>
+          </div>
+
+          <div id="cta-button" className="border flex flex-col w-5/6">
+            <button>Dowload CV</button>
+          </div>
+
+          <div id="settings" className="border flex flex-col w-5/6 text-center">
+            <p>Language Toggle</p>
+            <p>Dark Mode Toggle</p>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
