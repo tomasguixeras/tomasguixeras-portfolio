@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 function NavBar() {
-  const [openMenu, setOpenMenu] = useState(true);
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <>
