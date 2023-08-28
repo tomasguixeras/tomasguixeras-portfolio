@@ -3,6 +3,7 @@ import IconButton from "@/components/IconButton";
 import NavBar from "@/components/NavBar";
 import ProjectCard from "@/components/ProjectCard";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -65,7 +66,9 @@ export default function Home() {
             <ProjectCard />
             <ProjectCard />
           </div>
-          <a className="underline pl-2" href="">See more projects</a>
+          <Link className="underline pl-2" href="/projects">
+            See more projects
+          </Link>
         </div>
       </main>
       <Footer />
