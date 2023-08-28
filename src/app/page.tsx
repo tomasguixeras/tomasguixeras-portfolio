@@ -66,7 +66,7 @@ export default function Home() {
             <ProjectCard />
             <ProjectCard />
           </div>
-          <Link className="underline pl-2" href="/projects">
+          <Link className="underline pl-2" href="/portfolio">
             See more projects
           </Link>
         </div>

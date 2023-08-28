@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 function NavBar() {
@@ -45,9 +46,10 @@ function NavBar() {
       {openMenu && (
         <div className="absolute w-full top-14 h-5/6 bg-[#242531] flex flex-col items-center justify-evenly">
           <div id="sections" className="border flex flex-col w-5/6">
-            <a href="">Services</a>
-            <a href="">Portfolio</a>
-            <a href="">Blog</a>
+            <Link href="">Services</Link>
+            <Link href="/portfolio">Portfolio</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="#contact">Contact</Link>
           </div>
 
           <div id="cta-button" className="border flex flex-col w-5/6">

@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 
 function Footer() {
   return (
-    <footer className="bg-[#333544] w-full flex flex-col justify-center items-center text-center">
+    <footer id="contact" className="bg-[#333544] w-full flex flex-col justify-center items-center text-center">
       <Image
         src="/background/bg-wave.svg"
         width={0}

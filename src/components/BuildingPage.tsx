@@ -1,9 +1,7 @@
-"use client"
-import Link from "next/link";
-import { redirect } from "next/navigation";
-import React from "react";
+import Link from 'next/link';
+import React from 'react'
 
-function page() {
+function BuildingPage() {
   return (
     <div className="w-5/6 h-screen flex flex-col items-center justify-center">
       <div className="w-5/6 h-3/6 flex flex-col items-center justify-center text-3xl">
@@ -15,7 +13,7 @@ function page() {
       <div className="h-14 flex items-center justify-center mt-2">
         <Link
           className="border-2 px-4 py-2 m-2 rounded-full text-md font-semibold"
-          href="/"
+          href="/#contact"
         >
           Contact me
         </Link>
@@ -30,4 +28,4 @@ function page() {
   );
 }
 
-export default page;
+export default BuildingPage
