@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import IconButton from "@/components/IconButton";
 import NavBar from "@/components/NavBar";
 import ProjectCard from "@/components/ProjectCard";
+import Technologies from "@/components/Technologies";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -36,12 +37,8 @@ export default function Home() {
             />
             <IconButton icon={"x"} url={"https://twitter.com/tomasguixeras"} />
           </div>
-
-          <div
-            id="technologies-carrusel"
-            className="text-center w-screen py-2 bg-[#FFC25C] text-blue-950"
-          >
-            <p>Recat - Typescript</p>
+          <div className="w-screen">
+            <Technologies />
           </div>
         </div>
 

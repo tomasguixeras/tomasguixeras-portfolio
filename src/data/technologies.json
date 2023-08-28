@@ -1,0 +1,66 @@
+[
+  {
+    "icon": "typescript",
+    "name": "Typescript"
+  },
+  {
+    "icon": "tailwind",
+    "name": "Tailwind"
+  },
+  {
+    "icon": "react",
+    "name": "React"
+  },
+  {
+    "icon": "redux",
+    "name": "Redux"
+  },
+  {
+    "icon": "postgresql",
+    "name": "Postgre SQL"
+  },
+  {
+    "icon": "photoshop",
+    "name": "Photoshop"
+  },
+  {
+    "icon": "nodejs",
+    "name": "Node JS"
+  },
+  {
+    "icon": "nextjs",
+    "name": "Next JS"
+  },
+  {
+    "icon": "mongodb",
+    "name": "Mongo DB"
+  },
+  {
+    "icon": "materialui",
+    "name": "Material UI"
+  },
+  {
+    "icon": "javascript",
+    "name": "Javascript"
+  },
+  {
+    "icon": "illustrator",
+    "name": "Illustrator"
+  },
+  {
+    "icon": "html",
+    "name": "HTML"
+  },
+  {
+    "icon": "git",
+    "name": "Git"
+  },
+  {
+    "icon": "figma",
+    "name": "Figma"
+  },
+  {
+    "icon": "css",
+    "name": "CSS"
+  }
+]
