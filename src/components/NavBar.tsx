@@ -9,7 +9,7 @@ function NavBar() {
 
   return (
     <>
-      <div className="navbar bg-base-100 w-5/6 flex mt-4 relative">
+      <div className="navbar bg-base-100 w-5/6 flex items-center justify-between relative h-[90px]">
         <div className="flex-1">
           <a className="btn btn-ghost normal-case text-xl">
             <Image
@@ -44,7 +44,7 @@ function NavBar() {
         </div>
       </div>
       {openMenu && (
-        <div className="absolute w-screen top-14 h-5/6 bg-[#242531] flex flex-col items-center justify-evenly z-10">
+        <div className="absolute w-screen top-[90px] h-[calc(100vh-90px)] bg-[#242531] flex flex-col items-center justify-evenly z-10">
           <div id="sections" className="border flex flex-col w-5/6">
             <Link href="/services">Services</Link>
             <Link href="/portfolio">Portfolio</Link>
