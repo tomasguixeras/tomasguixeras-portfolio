@@ -44,9 +44,9 @@ function NavBar() {
         </div>
       </div>
       {openMenu && (
-        <div className="absolute w-full top-14 h-5/6 bg-[#242531] flex flex-col items-center justify-evenly">
+        <div className="absolute w-screen top-14 h-5/6 bg-[#242531] flex flex-col items-center justify-evenly z-10">
           <div id="sections" className="border flex flex-col w-5/6">
-            <Link href="">Services</Link>
+            <Link href="/services">Services</Link>
             <Link href="/portfolio">Portfolio</Link>
             <Link href="/blog">Blog</Link>
             <Link href="#contact">Contact</Link>
