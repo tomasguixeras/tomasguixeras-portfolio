@@ -17,12 +17,13 @@ function NavBar() {
               alt="Tomas Bohn Guixeras Logo"
               height={70}
               width={70}
+              className="h-12 w-auto md:h-16"
             />
           </a>
         </div>
         <div className="flex-none">
           <button
-            className="btn btn-square btn-ghost h-full w-8 relative"
+            className="btn btn-square btn-ghost h-10 w-auto relative"
             onClick={() => setOpenMenu((prev) => !prev)}
           >
             {!openMenu ? (
@@ -31,6 +32,7 @@ function NavBar() {
                 alt="Open menu icon"
                 height={40}
                 width={40}
+                className="h-8 w-8 md:h-12 md:w-12"
               />
             ) : (
               <Image
@@ -38,6 +40,7 @@ function NavBar() {
                 alt="Open menu icon"
                 height={40}
                 width={40}
+                className="h-8 w-8 md:h-12 md:w-12"
               />
             )}
           </button>

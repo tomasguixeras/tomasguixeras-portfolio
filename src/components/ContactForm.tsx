@@ -2,10 +2,10 @@ import React from "react";
 
 function ContactForm() {
   return (
-    <div className="w-5/6 mb-16">
+    <div className="w-5/6 mb-16 md:w-8/12">
       <form action="">
-        <div className="flex text-left">
-          <div className="flex flex-col mr-2">
+        <div className="flex items-center justify-center text-left">
+          <div className="flex-1 flex flex-col mr-1">
             <label className="pl-2" htmlFor="">
               Name
             </label>
@@ -15,7 +15,7 @@ function ContactForm() {
               type="text"
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex-1 flex flex-col ml-1">
             <label className="pl-2" htmlFor="">
               Email
             </label>
