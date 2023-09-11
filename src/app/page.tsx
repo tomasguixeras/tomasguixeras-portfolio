@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center w-full p-0 m-0 border">
+    <div className="flex flex-col justify-center items-center w-full p-0 m-0">
       <NavBar />
       <main
         id="container"
@@ -16,7 +16,7 @@ export default function Home() {
       >
         <div
           id="hero-section"
-          className="w-full flex flex-col items-center lg:flex-row lg:justify-between border"
+          className="w-full flex flex-col items-center lg:flex-row lg:justify-between"
         >
           <Image
             src="/tomas-hero.png"
@@ -25,7 +25,7 @@ export default function Home() {
             alt="Tomas Bohn Guixeras profile picture"
           />
 
-          <div className=" flex flex-col items-center my-4 border lg:flex-1 lg:items-start">
+          <div className="flex flex-col items-center my-4 lg:flex-1 lg:items-start">
             <div id="text-container" className="text-center lg:text-left">
               <h1 className="text-3xl font-bold bg-gradient-to-r from-[#FFC25C] to-[#ffe551] text-transparent bg-clip-text lg:text-6xl">
                 Tomas Bohn Guixeras
@@ -53,8 +53,8 @@ export default function Home() {
           <Technologies />
         </div>
 
-        <div id="about-section" className="mt-20">
-          <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-4">
+        <div id="about-section" className="mt-20 w-full">
+          <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-4 md:text-4xl">
             About Me
           </h3>
           <p>
@@ -64,17 +64,17 @@ export default function Home() {
           </p>
         </div>
 
-        <div id="Portfolio-section" className="mt-20">
-          <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-4">
+        <div id="Portfolio-section" className="mt-20 w-full">
+          <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-4 md:text-4xl">
             Portfolio
           </h3>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2 mb-10 md:gap-4">
             <ProjectCard />
             <ProjectCard />
             <ProjectCard />
             <ProjectCard />
           </div>
-          <Link className="underline pl-2" href="/portfolio">
+          <Link className="underline pl-2 md:text-2xl" href="/portfolio">
             See more projects
           </Link>
         </div>

@@ -19,15 +19,19 @@ function Footer() {
         alt="demo"
       />
 
-      <h3 className="w-4/6 text-2xl font-extrabold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text mb-20">
+      <h3 className="w-4/6 text-2xl font-extrabold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text mb-20 md:text-4xl">
         Construyamos Algo Grandioso Juntos
       </h3>
 
-      <p className="text-lg font-bold mb-4">Compárteme Tu Historia</p>
+      <p className="text-lg font-bold mb-4 md:text-2xl">
+        Compárteme Tu Historia
+      </p>
       <ContactForm />
 
-      <p className="text-lg font-bold mb-4">Descubre Más Sobre Mí</p>
-      <div className="w-5/6 flex flex-col justify-center items-center text-center mb-1">
+      <p className="text-lg font-bold mb-4 md:text-2xl">
+        Descubre Más Sobre Mí
+      </p>
+      <div className="w-5/6 flex flex-col justify-center items-center text-center mb-1 max-w-lg">
         <SocialButton
           icon={"linkedin"}
           title={"Linkedin"}
