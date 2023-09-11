@@ -8,8 +8,9 @@
   --secondary-background-color: #333544;
 }
 
-
 body {
+  margin: 0px;
+  padding: 0px;
   color: var(--foreground-rgb);
   background: var(--main-background-color);
 }

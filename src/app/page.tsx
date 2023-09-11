@@ -8,10 +8,16 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col justify-center items-center w-full p-0 m-0 border">
       <NavBar />
-      <main id="container" className="w-5/6">
-        <div id="hero-section" className="flex flex-col items-center">
+      <main
+        id="container"
+        className="w-5/6 flex flex-col justify-center items-center"
+      >
+        <div
+          id="hero-section"
+          className="w-full flex flex-col items-center lg:flex-row lg:justify-between border"
+        >
           <Image
             src="/tomas-hero.png"
             width={500}
@@ -19,27 +25,32 @@ export default function Home() {
             alt="Tomas Bohn Guixeras profile picture"
           />
 
-          <div id="text-container" className="text-center">
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-[#FFC25C] to-[#ffe551] text-transparent bg-clip-text">
-              Tomas Bohn Guixeras
-            </h1>
-            <h4 className="text-2xl">Fullstack Developer</h4>
-          </div>
+          <div className=" flex flex-col items-center my-4 border lg:flex-1 lg:items-start">
+            <div id="text-container" className="text-center lg:text-left">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-[#FFC25C] to-[#ffe551] text-transparent bg-clip-text lg:text-6xl">
+                Tomas Bohn Guixeras
+              </h1>
+              <h4 className="text-2xl lg:text-4xl">Fullstack Developer</h4>
+            </div>
 
-          <div id="icon-buttons-container" className="flex w-fit my-10">
-            <IconButton
-              icon={"linkedin"}
-              url={"https://www.linkedin.com/in/tomasbohnguixeras/"}
-            />
-            <IconButton
-              icon={"github"}
-              url={"https://github.com/tomasguixeras"}
-            />
-            <IconButton icon={"x"} url={"https://twitter.com/tomasguixeras"} />
+            <div id="icon-buttons-container" className="flex w-fit my-5">
+              <IconButton
+                icon={"linkedin"}
+                url={"https://www.linkedin.com/in/tomasbohnguixeras/"}
+              />
+              <IconButton
+                icon={"github"}
+                url={"https://github.com/tomasguixeras"}
+              />
+              <IconButton
+                icon={"x"}
+                url={"https://twitter.com/tomasguixeras"}
+              />
+            </div>
           </div>
-          <div className="w-screen">
-            <Technologies />
-          </div>
+        </div>
+        <div className="w-screen overflow-hidden">
+          <Technologies />
         </div>
 
         <div id="about-section" className="mt-20">
@@ -69,6 +80,6 @@ export default function Home() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

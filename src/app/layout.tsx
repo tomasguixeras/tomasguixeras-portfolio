@@ -7,7 +7,7 @@ import { Inter } from "next/font/google";
 export const metadata: Metadata = {
   title: "Tomas Bohn Guixeras | Javascript / Typescript Fullstack Developer",
   description:
-    "Javascript / Typescript Fullstack Developer | React - Redux - Node Js - Express Js - Postgre SQL"
+    "Javascript / Typescript Fullstack Developer | React - Redux - Node Js - Express Js - Postgre SQL",
 };
 
 export default function RootLayout({
@@ -17,9 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex flex-col justify-center items-center">
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
