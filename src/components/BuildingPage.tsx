@@ -3,7 +3,7 @@ import React from 'react'
 
 function BuildingPage() {
   return (
-    <div className="h-screen flex flex-col items-center justify-center border">
+    <div className="h-screen flex flex-col items-center justify-center">
       <div className="w-5/6 h-3/6 flex flex-col items-center justify-center text-3xl">
         <p className="my-2 text-center">We are working on this view.</p>
         <p className="my-2 text-center">It would be available soon.</p>
