@@ -10,7 +10,6 @@ import Technologies from "@/components/Technologies";
 export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center w-full p-0 m-0">
-      <NavBar />
       <main
         id="container"
         className="w-5/6 flex flex-col justify-center items-center"
