@@ -6,15 +6,10 @@ import Marquee from "react-fast-marquee";
 import technologies_data from "../data/technologies.json";
 import TechCard from "./TechCard";
 
-type TechnData = {
-  icon: string;
-  name: string;
-};
-
 function Technologies() {
   return (
     <Marquee
-      className="text-center w-screen py-3 text-md bg-white bg-opacity-75 md:py-5 md:text-lg"
+      className="text-center w-screen py-3 text-md bg-[#e5e5e5]  md:py-5 md:text-lg"
       pauseOnHover={true}
     >
       {technologies_data?.map((data, i) => (

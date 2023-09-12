@@ -37,7 +37,7 @@ function NavBar() {
               alt="Tomas Bohn Guixeras Logo"
               height={70}
               width={70}
-              className="h-12 w-auto md:h-16"
+              className="h-12 w-auto md:h-16 lg:h-10"
             />
           </Link>
         </div>

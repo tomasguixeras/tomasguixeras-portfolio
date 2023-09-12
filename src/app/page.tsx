@@ -16,7 +16,7 @@ export default function Home() {
       >
         <div
           id="hero-section"
-          className="w-full flex flex-col items-center lg:flex-row lg:justify-between"
+          className="w-full flex flex-col items-center lg:flex-row lg:justify-between lg:gap-6 lg:my-12"
         >
           <Image
             src="/tomas-hero.png"

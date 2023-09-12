@@ -20,17 +20,17 @@ function DesktopCTA({
             <Image
               src="/languages/spain-flag.svg"
               alt="Change language to Spanish"
-              height={40}
-              width={40}
-              className="h-8 w-8 md:h-12 md:w-12"
+              height={20}
+              width={20}
+              className="h-8 w-8"
             />
           ) : (
             <Image
               src="/languages/us-flag.svg"
               alt="Change language to English"
-              height={40}
-              width={40}
-              className="h-8 w-8 md:h-12 md:w-12"
+              height={20}
+              width={20}
+              className="h-8 w-8"
             />
           )}
         </button>
@@ -44,17 +44,17 @@ function DesktopCTA({
             <Image
               src="/color-schema/sun-light-mode.svg"
               alt="Change language to Spanish"
-              height={40}
-              width={40}
-              className="h-8 w-8 md:h-12 md:w-12"
+              height={20}
+              width={20}
+              className="h-8 w-8"
             />
           ) : (
             <Image
               src="/color-schema/moon-dark-mode.svg"
               alt="Change language to English"
-              height={40}
-              width={40}
-              className="h-8 w-8 md:h-12 md:w-12"
+              height={20}
+              width={20}
+              className="h-8 w-8"
             />
           )}
         </button>

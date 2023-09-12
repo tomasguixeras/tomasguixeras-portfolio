@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function DesktopMenu({ userSelectedPage, setUserSelectedPage }: any) {
   return (
-    <div className="flex gap-5 text-2xl">
+    <div className="flex gap-5 text-lg">
       <Link
         onClick={() => setUserSelectedPage("services")}
         href="/services"
