@@ -1,10 +1,11 @@
-import Footer from "@/components/Footer";
-import IconButton from "@/components/IconButton";
-import NavBar from "@/components/NavBar";
-import ProjectCard from "@/components/ProjectCard";
-import Technologies from "@/components/Technologies";
 import Image from "next/image";
 import Link from "next/link";
+
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
+import IconButton from "@/components/IconButton";
+import ProjectCard from "@/components/ProjectCard";
+import Technologies from "@/components/Technologies";
 
 export default function Home() {
   return (
@@ -25,12 +26,14 @@ export default function Home() {
             alt="Tomas Bohn Guixeras profile picture"
           />
 
-          <div className="flex flex-col items-center my-4 lg:flex-1 lg:items-start">
+          <div className="flex flex-col items-center my-4 md:my-7 lg:flex-1 lg:items-start">
             <div id="text-container" className="text-center lg:text-left">
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-[#FFC25C] to-[#ffe551] text-transparent bg-clip-text lg:text-6xl">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-[#FFC25C] to-[#ffe551] text-transparent bg-clip-text md:text-5xl lg:text-6xl">
                 Tomas Bohn Guixeras
               </h1>
-              <h4 className="text-2xl lg:text-4xl">Fullstack Developer</h4>
+              <h4 className="text-2xl italic font-semibold md:text-3xl lg:text-4xl">
+                Fullstack Developer
+              </h4>
             </div>
 
             <div id="icon-buttons-container" className="flex w-fit my-5">

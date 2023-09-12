@@ -41,7 +41,7 @@ function ContactForm() {
         </div>
         <button
           type="submit"
-          className="bg-[#FFC25C] py-2 px-4 w-40 m-4 rounded-full text-[#333544]"
+          className="bg-[#FFC25C] py-2 px-4 w-40 m-4 rounded-full text-[#333544] md:text-2xl md:font-bold md:w-60 md:py-2"
         >
           Send
         </button>

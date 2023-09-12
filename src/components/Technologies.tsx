@@ -14,7 +14,7 @@ type TechnData = {
 function Technologies() {
   return (
     <Marquee
-      className="text-center w-screen py-2 bg-[#FFC25C] "
+      className="text-center w-screen py-3 text-md bg-white bg-opacity-75 md:py-5 md:text-lg"
       pauseOnHover={true}
     >
       {technologies_data?.map((data, i) => (
