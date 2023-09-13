@@ -31,7 +31,11 @@ function NavBar() {
     <>
       <div className="navbar bg-base-100 w-5/6 flex items-center justify-between relative h-[90px]">
         <div className="flex-1 lg:flex-none">
-          <Link href="/" className="btn btn-ghost normal-case text-xl">
+          <Link
+            href="/"
+            onClick={() => setUserSelectedPage("")}
+            className="btn btn-ghost normal-case text-xl"
+          >
             <Image
               src="/Logo.png"
               alt="Tomas Bohn Guixeras Logo"

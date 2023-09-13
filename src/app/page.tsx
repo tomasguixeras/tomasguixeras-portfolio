@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import IconButton from "@/components/IconButton";
 import ProjectCard from "@/components/ProjectCard";

@@ -14,3 +14,10 @@ body {
   color: var(--foreground-rgb);
   background: var(--main-background-color);
 }
+
+.clip-path-desktop {
+  clip-path: polygon(0 21%, 100% 0, 100% 100%, 0% 100%);
+}
+.clip-path-sm {
+  clip-path: polygon(0 9%, 100% 0, 100% 100%, 0% 100%);
+}
