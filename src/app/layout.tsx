@@ -1,9 +1,17 @@
 import NavBar from "@/components/NavBar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Rubik, Roboto_Mono } from "next/font/google";
 
-// const inter = Inter({ subsets: ['latin'] })
+const rubik = Rubik({
+  variable: "--display-font",
+  subsets: ["latin"],
+});
+
+const roboto = Roboto_Mono({
+  variable: "--body-font",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Tomas Bohn Guixeras | Javascript / Typescript Fullstack Developer",
@@ -17,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="flex flex-col items-center">
+    <html className={`${rubik.variable} ${roboto.variable}`} lang="en">
+      <body className="flex flex-col items-center font-body">
         <NavBar />
         {children}
       </body>

@@ -11,7 +11,7 @@ function ContactForm() {
             </label>
             <input
               placeholder="Demo Name"
-              className="box-border w-full bg-transparent border rounded-lg p-1 lg:w-52"
+              className="box-border w-full bg-transparent border-2 rounded-lg p-1 lg:w-52"
               type="text"
             />
           </div>
@@ -21,7 +21,7 @@ function ContactForm() {
             </label>
             <input
               placeholder="example@mail.com"
-              className="box-border w-full bg-transparent border rounded-lg p-1 lg:w-52"
+              className="box-border w-full bg-transparent border-2 rounded-lg p-1 lg:w-52"
               type="text"
             />
           </div>
@@ -32,7 +32,7 @@ function ContactForm() {
           </label>
           <textarea
             placeholder="Write your message here..."
-            className="bg-transparent border rounded-lg p-1 lg:w-full"
+            className="bg-transparent border-2 rounded-lg p-1 lg:w-full"
             name=""
             id=""
             cols={30}
@@ -41,7 +41,7 @@ function ContactForm() {
         </div>
         <button
           type="submit"
-          className="bg-[#FFC25C] py-2 px-4 w-40 m-4 rounded-full text-[#333544] md:text-2xl md:font-bold md:w-60 md:py-2"
+          className="bg-[#FFC25C] py-2 px-4 w-40 m-4 rounded-full text-[#333544] md:text-xl md:font-semibold md:w-60 md:py-2"
         >
           Send
         </button>

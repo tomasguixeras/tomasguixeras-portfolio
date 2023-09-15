@@ -5,14 +5,14 @@ function SocialButton({ icon, title, url } : any) {
   return (
     <a
       href={url}
-      className="border rounded-full flex items-center justify-center py-2 px-3 w-9/12 relative m-1 lg:w-80"
+      className="border-2 rounded-full flex items-center justify-center py-2 px-3 w-9/12 relative m-1 lg:w-80 lg:h-14 lg:text-lg lg:font-semibold"
     >
       <Image
         src={`/social-icons/${icon}-logo.svg`}
-        width={30}
-        height={30}
+        width={25}
+        height={25}
         alt="demo social media icons"
-        className="absolute left-4"
+        className="absolute left-7"
       />
       {`${title}`}
     </a>

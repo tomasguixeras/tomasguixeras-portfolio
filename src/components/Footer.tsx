@@ -10,7 +10,7 @@ function Footer() {
       id="contact"
       className="clip-path-sm bg-[#333544] w-full flex flex-col justify-center items-center text-center lg:clip-path-desktop"
     >
-      <h3 className="w-4/6 text-2xl font-extrabold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text mt-40 mb-20 md:mt-60 md:text-4xl lg:mt-80 lg:max-w-lg lg:text-5xl lg:leading-relaxed">
+      <h3 className="font-display w-4/6 text-2xl font-extrabold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text mt-40 mb-20 md:mt-60 md:text-4xl lg:mt-80 lg:max-w-lg lg:text-5xl lg:leading-snug">
         Construyamos Algo Grandioso Juntos
       </h3>
 
@@ -57,7 +57,7 @@ function Footer() {
         </div>
       </div>
       <hr className="bg-white w-5/6" />
-      <h6 className="text-sm pt-2 pb-4">
+      <h6 className="text-sm pt-2 pb-4 lg:pb-6 lg:pt-8 lg:text-base">
         Developed by
         <a href="https://www.github.com/tomasguixeras"> Tomas Guixeras</a>
       </h6>

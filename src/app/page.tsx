@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,7 +7,33 @@ import IconButton from "@/components/IconButton";
 import ProjectCard from "@/components/ProjectCard";
 import Technologies from "@/components/Technologies";
 
+import projects from "@/data/projects.json";
+import { useState, useEffect } from "react";
+
+interface projectsStructure {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+  technologies: string[];
+}
+
 export default function Home() {
+  const [renderProjects, setRenderProjects] = useState<
+    Array<projectsStructure>
+  >([]);
+
+  useEffect(() => {
+    const screen = localStorage.getItem("screen-size");
+    if (screen) {
+      if (parseInt(screen) >= 1024) {
+        setRenderProjects(projects.slice(0, 6));
+      } else {
+        setRenderProjects(projects.slice(0, 4));
+      }
+    }
+  }, []);
+
   return (
     <div className="flex flex-col justify-center items-center w-full p-0 m-0">
       <main
@@ -15,7 +42,7 @@ export default function Home() {
       >
         <div
           id="hero-section"
-          className="w-full flex flex-col items-center lg:flex-row lg:justify-between lg:gap-6 lg:my-12"
+          className="w-full flex flex-col items-center lg:flex-row lg:justify-between lg:gap-6 lg:my-12 font-display"
         >
           <Image
             src="/tomas-hero.png"
@@ -65,15 +92,22 @@ export default function Home() {
           </p>
         </div>
 
-        <div id="Portfolio-section" className="mt-20 w-full">
+        <div id="Portfolio-section" className="mt-20 w-full lg:mb-20">
           <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-4 md:text-4xl">
             Portfolio
           </h3>
-          <div className="grid grid-cols-2 gap-2 mb-10 md:gap-4">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+          <div className="grid grid-cols-2 gap-2 mb-10 md:gap-4 lg:grid-cols-3">
+            {renderProjects &&
+              renderProjects.map((project) => {
+                return (
+                  <ProjectCard
+                    key={project.id}
+                    name={project.name}
+                    description={project.description}
+                    image={project.image}
+                  />
+                );
+              })}
           </div>
           <Link className="underline pl-2 md:text-2xl" href="/portfolio">
             See more projects
