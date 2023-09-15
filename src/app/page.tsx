@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,9 +7,10 @@ import Footer from "@/components/Footer";
 import IconButton from "@/components/IconButton";
 import ProjectCard from "@/components/ProjectCard";
 import Technologies from "@/components/Technologies";
+import AboutButtons from "@/components/AboutButtons";
 
 import projects from "@/data/projects.json";
-import { useState, useEffect } from "react";
+import SocialButton from "@/components/SocialButton";
 
 interface projectsStructure {
   id: number;
@@ -19,14 +21,14 @@ interface projectsStructure {
 }
 
 export default function Home() {
-  // const [screenSize, setScreenSize] = useState(0);
+  const [screenSize, setScreenSize] = useState(0);
   const [renderProjects, setRenderProjects] = useState<
     Array<projectsStructure>
   >([]);
 
   useEffect(() => {
     const screen = localStorage.getItem("screen-size");
-    // screen && setScreenSize(parseInt(screen));
+    screen && setScreenSize(parseInt(screen));
     if (screen) {
       if (parseInt(screen) >= 1024) {
         setRenderProjects(projects.slice(0, 6));
@@ -84,18 +86,48 @@ export default function Home() {
         </div>
 
         <div id="about-section" className="mt-20 w-full">
-          <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-4 md:text-4xl">
-            About Me
-          </h3>
-          <p>
-            Desarrollador junior en constante búsqueda de la simplicidad
-            elegante en la programación y el diseño. Mi objetivo es crear
-            conexiones virtuales que inspiren y resuelvan problemas.
-          </p>
+          <div className="w-full flex flex-row items-center">
+            <div className="flex-1 flex flex-col h-fit lg:mr-6">
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-6 md:text-4xl">
+                About Me
+              </h3>
+              <p>
+                Desarrollador junior en constante búsqueda de la simplicidad
+                elegante en la programación y el diseño. <br /> Mi objetivo es
+                crear conexiones virtuales que inspiren y resuelvan problemas.
+              </p>
+              {screenSize >= 1024 && (
+                <div className="flex flex-row mt-12">
+                  <AboutButtons
+                    icon={"calendly"}
+                    title={"Book a Meeting"}
+                    url={
+                      "https://calendly.com/tomasguixeras/reunion-con-tomas-bohn-guixeras?month=2023-09"
+                    }
+                  />
+                  <AboutButtons
+                    icon={"curriculum"}
+                    title={"Download cv"}
+                    url={"/curriculum/CV Tomas Bohn Guixeras | Fullstack Developer | Español.pdf"}
+                  />
+                </div>
+              )}
+            </div>
+            {screenSize >= 768 && (
+              <div className="flex-1 m-6">
+                <Image
+                  src="/computer-about-me.png"
+                  alt="demo bla bla"
+                  width={500}
+                  height={500}
+                />
+              </div>
+            )}
+          </div>
         </div>
 
         <div id="Portfolio-section" className="mt-20 w-full lg:mb-20">
-          <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-4 md:text-4xl lg:mb-10">
+          <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-6 md:text-4xl lg:mb-10">
             Portfolio
           </h3>
           <div className="grid grid-cols-2 gap-2 mb-10 md:gap-4 lg:grid-cols-3 lg:mb-7">

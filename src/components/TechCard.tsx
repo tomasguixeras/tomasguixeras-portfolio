@@ -20,7 +20,7 @@ function TechCard({ item }: ItemComponentProps) {
         height={30}
         width={30}
       />
-      <p className="text-blue-950 font-semibold md:text-lg font-display">
+      <p className="text-gray-100 font-semibold md:text-lg font-display">
         {item.name}
       </p>
     </div>
