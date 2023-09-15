@@ -6,15 +6,16 @@ function ProjectCard({ name, description, image }: cardInfo) {
     <div className="mb-2">
       <div
         style={{
-          backgroundImage: `url(${image})`,
+          backgroundImage: "url(demo-full-page.png)",
+          // backgroundImage: `url(${image})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
-          backgroundPosition: "center",
+          backgroundSize: "100% auto",
+          backgroundPosition: "center top",
         }}
         className={`border w-full h-44 rounded-lg`}
       ></div>
-      <p className="ml-2 font-bold text-md md:text-2xl">{name}</p>
-      <p className="ml-2 text-sm italic md:text-lg">{description}</p>
+      <p className="ml-2 font-bold text-md md:text-xl">{name}</p>
+      <p className="ml-2 text-sm italic md:text-md">{description}</p>
     </div>
   );
 }
