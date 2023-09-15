@@ -10,7 +10,6 @@ import Technologies from "@/components/Technologies";
 import AboutButtons from "@/components/AboutButtons";
 
 import projects from "@/data/projects.json";
-import SocialButton from "@/components/SocialButton";
 
 interface projectsStructure {
   id: number;
@@ -32,6 +31,8 @@ export default function Home() {
     if (screen) {
       if (parseInt(screen) >= 1024) {
         setRenderProjects(projects.slice(0, 6));
+      } else if (parseInt(screen) <= 640) {
+        setRenderProjects(projects.slice(0, 3));
       } else {
         setRenderProjects(projects.slice(0, 4));
       }
@@ -108,7 +109,9 @@ export default function Home() {
                   <AboutButtons
                     icon={"curriculum"}
                     title={"Download cv"}
-                    url={"/curriculum/CV Tomas Bohn Guixeras | Fullstack Developer | Español.pdf"}
+                    url={
+                      "/curriculum/CV Tomas Bohn Guixeras | Fullstack Developer | Español.pdf"
+                    }
                   />
                 </div>
               )}
@@ -130,7 +133,7 @@ export default function Home() {
           <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-6 md:text-4xl lg:mb-10">
             Portfolio
           </h3>
-          <div className="grid grid-cols-2 gap-2 mb-10 md:gap-4 lg:grid-cols-3 lg:mb-7">
+          <div className="grid grid-cols-1 gap-2 mb-10 md:gap-4 md:grid-cols-2 lg:grid-cols-3 lg:mb-7">
             {renderProjects &&
               renderProjects.map((project) => {
                 return (
