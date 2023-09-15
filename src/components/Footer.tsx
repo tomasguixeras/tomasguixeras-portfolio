@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import SocialButton from "./SocialButton";
 import ContactForm from "./ContactForm";
 import IconButton from "./IconButton";

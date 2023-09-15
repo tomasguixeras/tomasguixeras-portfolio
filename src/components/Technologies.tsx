@@ -9,10 +9,10 @@ import TechCard from "./TechCard";
 function Technologies() {
   return (
     <Marquee
-      className="text-center w-screen py-3 text-md bg-[#e5e5e5]  md:py-5 md:text-lg"
+      className="py-3 bg-[#e5e5e5]  md:py-5"
       pauseOnHover={true}
     >
-      {technologies_data?.map((data, i) => (
+      {technologies_data.map((data, i) => (
         <TechCard key={i} item={data} />
       ))}
     </Marquee>

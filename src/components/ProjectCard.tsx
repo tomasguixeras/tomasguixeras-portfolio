@@ -1,20 +1,15 @@
 import React from "react";
+import { cardInfo } from "@/types/projects";
 
-interface cardInfo {
-  name: string;
-  description: string;
-  image: string;
-  technologies?: string[];
-}
-
-function ProjectCard({ name, description, image, technologies }: cardInfo) {
+function ProjectCard({ name, description, image }: cardInfo) {
   return (
     <div className="mb-2">
       <div
         style={{
           backgroundImage: `url(${image})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
+          backgroundSize: "100% 100%",
+          backgroundPosition: "center",
         }}
         className={`border w-full h-44 rounded-lg`}
       ></div>

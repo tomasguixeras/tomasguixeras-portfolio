@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React from "react";
+import { socialButtonType } from "@/types/socialButtons";
 
-function SocialButton({ icon, title, url } : any) {
+function SocialButton({ icon, title, url }: socialButtonType) {
   return (
     <a
       href={url}

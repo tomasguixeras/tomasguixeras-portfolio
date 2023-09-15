@@ -19,12 +19,14 @@ interface projectsStructure {
 }
 
 export default function Home() {
+  // const [screenSize, setScreenSize] = useState(0);
   const [renderProjects, setRenderProjects] = useState<
     Array<projectsStructure>
   >([]);
 
   useEffect(() => {
     const screen = localStorage.getItem("screen-size");
+    // screen && setScreenSize(parseInt(screen));
     if (screen) {
       if (parseInt(screen) >= 1024) {
         setRenderProjects(projects.slice(0, 6));
@@ -35,7 +37,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center w-full p-0 m-0">
+    <div className="flex flex-col justify-center items-center w-full p-0 m-0 overflow-hidden">
       <main
         id="container"
         className="w-5/6 flex flex-col justify-center items-center"
@@ -45,7 +47,7 @@ export default function Home() {
           className="w-full flex flex-col items-center lg:flex-row lg:justify-between lg:gap-6 lg:my-12 font-display"
         >
           <Image
-            src="/tomas-hero.png"
+            src="/tomas-hero-sin-fondo.png"
             width={500}
             height={500}
             alt="Tomas Bohn Guixeras profile picture"
@@ -77,7 +79,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-screen overflow-hidden">
+        <div className="w-screen m-0 p-0">
           <Technologies />
         </div>
 
