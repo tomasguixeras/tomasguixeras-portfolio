@@ -113,7 +113,7 @@ export default function Home() {
                 </div>
               )}
             </div>
-            {screenSize >= 768 && (
+            {screenSize >= 700 && (
               <div className="flex-1 m-6">
                 <Image
                   src="/computer-about-me.png"
