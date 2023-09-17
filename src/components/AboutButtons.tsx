@@ -6,7 +6,7 @@ function AboutButtons({ icon, title, url }: any) {
     <a
       target="_blank"
       href={url}
-      className="border-2 rounded-full flex items-center justify-center py-2 px-3 w-1/2 relative m-4 lg:text-lg hover:shadow hover:shadow-slate-300"
+      className="border-2 rounded-full flex items-center justify-center py-2 px-3 relative m-4 lg:text-lg hover:shadow hover:shadow-slate-300"
     >
       <Image
         src={`/social-icons/${icon}-logo.svg`}

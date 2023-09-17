@@ -1,22 +1,15 @@
 import React from "react";
 import Image from "next/image";
 
-function DesktopCTA({
-  userLanguage,
-  setUserLanguage,
-  userTheme,
-  setUserTheme,
-}: any) {
+function DesktopCTA({ handleUserConfig, language, theme }: any) {
   return (
     <div className="flex gap-4">
       <div>
         <button
           className="btn btn-square btn-ghost h-10 w-auto"
-          onClick={() =>
-            setUserLanguage(userLanguage === "ESP" ? "ENG" : "ESP")
-          }
+          onClick={() => handleUserConfig("userLanguage")}
         >
-          {userLanguage === "ESP" ? (
+          {language === "ENG" ? (
             <Image
               src="/languages/spain-flag.svg"
               alt="Change language to Spanish"
@@ -38,9 +31,9 @@ function DesktopCTA({
       <div>
         <button
           className="btn btn-square btn-ghost h-10 w-auto"
-          onClick={() => setUserTheme(userTheme === "DARK" ? "LIGHT" : "DARK")}
+          onClick={() => handleUserConfig("userTheme")}
         >
-          {userTheme === "DARK" ? (
+          {theme === "DARK" ? (
             <Image
               src="/color-schema/sun-light-mode.svg"
               alt="Change language to Spanish"

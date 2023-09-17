@@ -10,10 +10,46 @@ import DesktopCTA from "./DesktopCTA";
 
 function NavBar() {
   const [userSelectedPage, setUserSelectedPage] = useState("");
-  const [userLanguage, setUserLanguage] = useState("ENG");
-  const [userTheme, setUserTheme] = useState("DARK");
+  const [language, setLanguage] = useState("");
+  const [theme, setTheme] = useState("");
   const [openMenu, setOpenMenu] = useState(false);
   const [currentWidth, setCurrentWidth] = useState(0);
+
+  const handleUserConfig = (toConfig: string) => {
+    if (toConfig === "userLanguage") {
+      const currentLanguage = localStorage.getItem("userLanguage");
+      currentLanguage === "ENG"
+        ? localStorage.setItem("userLanguage", "ESP")
+        : localStorage.setItem("userLanguage", "ENG");
+    } else if (toConfig === "userTheme") {
+      const currentTheme = localStorage.getItem("userTheme");
+      currentTheme === "DARK"
+        ? localStorage.setItem("userTheme", "LIGHT")
+        : localStorage.setItem("userTheme", "DARK");
+    } else return;
+    const userLanguage = localStorage.getItem("userLanguage");
+    userLanguage && setLanguage(userLanguage);
+    const userTheme = localStorage.getItem("userTheme");
+    userTheme && setTheme(userTheme);
+  };
+
+  useEffect(() => {
+    const userTheme = localStorage.getItem("userTheme");
+    const userLanguage = localStorage.getItem("userLanguage");
+    userTheme && setTheme(userTheme);
+    userLanguage && setLanguage(userLanguage);
+
+    if (!userTheme) {
+      localStorage.setItem("userTheme", "DARK");
+      const userTheme = localStorage.getItem("userTheme");
+      userTheme && setTheme(userTheme);
+    }
+    if (!userLanguage) {
+      localStorage.setItem("userLanguage", "ENG");
+      const userLanguage = localStorage.getItem("userLanguage");
+      userLanguage && setLanguage(userLanguage);
+    }
+  }, [language, theme]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -53,17 +89,22 @@ function NavBar() {
               setUserSelectedPage={setUserSelectedPage}
             />
             <DesktopCTA
-              userLanguage={userLanguage}
-              setUserLanguage={setUserLanguage}
-              userTheme={userTheme}
-              setUserTheme={setUserTheme}
+              handleUserConfig={handleUserConfig}
+              language={language}
+              theme={theme}
             />
           </>
         ) : (
           <NavBurger openMenu={openMenu} setOpenMenu={setOpenMenu} />
         )}
       </div>
-      <NavMenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
+      <NavMenu
+        openMenu={openMenu}
+        setOpenMenu={setOpenMenu}
+        handleUserConfig={handleUserConfig}
+        language={language}
+        theme={theme}
+      />
     </>
   );
 }

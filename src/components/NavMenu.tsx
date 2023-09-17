@@ -1,7 +1,17 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
-function NavMenu({ openMenu, setOpenMenu }: any) {
+import AboutButtons from "@/components/AboutButtons";
+
+function NavMenu({
+  openMenu,
+  setOpenMenu,
+  handleUserConfig,
+  language,
+  theme,
+}: any) {
   return (
     <>
       {openMenu && (
@@ -18,15 +28,74 @@ function NavMenu({ openMenu, setOpenMenu }: any) {
             </div>
 
             <div id="cta-button" className="border flex flex-col w-5/6">
-              <button>Dowload CV</button>
+              <AboutButtons
+                icon={"calendly"}
+                title={"Book a Meeting"}
+                url={
+                  "https://calendly.com/tomasguixeras/reunion-con-tomas-bohn-guixeras?month=2023-09"
+                }
+              />
+              <AboutButtons
+                icon={"curriculum"}
+                title={"Download cv"}
+                url={
+                  "/curriculum/CV Tomas Bohn Guixeras | Fullstack Developer | Español.pdf"
+                }
+              />
             </div>
 
             <div
               id="settings"
-              className="border flex flex-col w-5/6 text-center"
+              className="border flex gap-8 w-5/6 justify-center"
             >
-              <p>Language Toggle</p>
-              <p>Dark Mode Toggle</p>
+              <div>
+                <button
+                  className="btn btn-square btn-ghost h-10 w-auto"
+                  onClick={() => handleUserConfig("userLanguage")}
+                >
+                  {language === "ENG" ? (
+                    <Image
+                      src="/languages/spain-flag.svg"
+                      alt="Change language to Spanish"
+                      height={20}
+                      width={20}
+                      className="h-8 w-8"
+                    />
+                  ) : (
+                    <Image
+                      src="/languages/us-flag.svg"
+                      alt="Change language to English"
+                      height={20}
+                      width={20}
+                      className="h-8 w-8"
+                    />
+                  )}
+                </button>
+              </div>
+              <div>
+                <button
+                  className="btn btn-square btn-ghost h-10 w-auto"
+                  onClick={() => handleUserConfig("userTheme")}
+                >
+                  {theme === "DARK" ? (
+                    <Image
+                      src="/color-schema/sun-light-mode.svg"
+                      alt="Change language to Spanish"
+                      height={20}
+                      width={20}
+                      className="h-8 w-8"
+                    />
+                  ) : (
+                    <Image
+                      src="/color-schema/moon-dark-mode.svg"
+                      alt="Change language to English"
+                      height={20}
+                      width={20}
+                      className="h-8 w-8"
+                    />
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </div>

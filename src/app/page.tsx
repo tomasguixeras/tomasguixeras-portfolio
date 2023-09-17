@@ -50,10 +50,11 @@ export default function Home() {
           className="w-full flex flex-col items-center lg:flex-row lg:justify-between lg:gap-6 lg:my-12 font-display"
         >
           <Image
-            src="/tomas-hero-sin-fondo.png"
-            width={500}
-            height={500}
             alt="Tomas Bohn Guixeras profile picture"
+            src="/tomas-hero-sin-fondo.png"
+            draggable="false"
+            height={500}
+            width={500}
           />
 
           <div className="flex flex-col items-center my-4 md:my-7 lg:flex-1 lg:items-start">
@@ -121,8 +122,9 @@ export default function Home() {
                 <Image
                   src="/computer-about-me.png"
                   alt="demo bla bla"
-                  width={500}
+                  draggable="false"
                   height={500}
+                  width={500}
                 />
               </div>
             )}
