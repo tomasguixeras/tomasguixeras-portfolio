@@ -9,7 +9,7 @@ function IconButton({ icon, url }: iconButtonType) {
       className="flex items-center justify-center border-2 w-12 h-12 rounded-full m-2 hover:rotate-45 hover:duration-300 hover:shadow-inner hover:shadow-white"
     >
       <Image
-        src={`/social-icons/${icon}-logo.svg`}
+        src={`/social-icons/${icon}`}
         alt="Social Icon Button"
         height={22}
         width={22}

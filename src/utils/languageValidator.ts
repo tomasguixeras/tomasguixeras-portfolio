@@ -1,4 +1,6 @@
-interface navbarLinks {
+import { footerLanguage, footerTexts } from "@/types/json-data/footer-links";
+
+export interface navbarLinks {
   key: string;
   name: string;
   slug: string;
@@ -12,7 +14,7 @@ interface navbarText {
   english: links;
 }
 
-export const languageValidator = (text: navbarText) => {
+export const languageValidator = (text: navbarText | footerLanguage) => {
   let textToRender;
   const userLanguage = localStorage.getItem("userLanguage");
   userLanguage &&

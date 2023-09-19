@@ -1,9 +1,15 @@
 import React from "react";
+
 import SocialButton from "./SocialButton";
 import ContactForm from "./ContactForm";
 import IconButton from "./IconButton";
 
+import links from "@/data/external-links.json";
+
 function Footer() {
+  const mainButtons = links.slice(0, 4);
+  const iconButtons = links.slice(4, links.length);
+
   return (
     <footer
       id="contact"
@@ -26,32 +32,28 @@ function Footer() {
             Descubre Más Sobre Mí
           </p>
           <div className="w-5/6 flex flex-col justify-center items-center text-center mb-1 max-w-lg">
-            <SocialButton
-              icon={"linkedin"}
-              title={"Linkedin"}
-              url={"https://www.linkedin.com/in/tomasbohnguixeras/"}
-            />
-            <SocialButton
-              icon={"github"}
-              title={"GitHub"}
-              url={"https://github.com/tomasguixeras"}
-            />
-            <SocialButton
-              icon={"x"}
-              title={"X"}
-              url={"https://twitter.com/tomasguixeras"}
-            />
-            <SocialButton
-              icon={"instagram"}
-              title={"Instagram"}
-              url={"https://www.instagram.com/tomasguixeras/"}
-            />
+            {mainButtons.map((button) => {
+              return (
+                <SocialButton
+                  key={button.slug}
+                  icon={button.icon}
+                  title={button.name}
+                  url={button.url}
+                />
+              );
+            })}
           </div>
 
           <div className="flex mb-10">
-            <IconButton icon="whatsapp" url="https://wa.me/34637125170" />
-            <IconButton icon="telegram" url="https://t.me/tomasguixeras" />
-            <IconButton icon="mail" url="mailto:tomasbohngs@gmail.com" />
+            {iconButtons.map((button) => {
+              return (
+                <IconButton
+                  key={button.slug}
+                  icon={button.icon}
+                  url={button.url}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

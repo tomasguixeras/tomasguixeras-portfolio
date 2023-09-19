@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "linkedin",
+    "name": "LinkedIn",
+    "icon": "linkedin-logo.svg",
+    "url": "https://www.linkedin.com/in/tomasbohnguixeras/"
+  },
+  {
+    "slug": "github",
+    "name": "Github",
+    "icon": "github-logo.svg",
+    "url": "https://github.com/tomasguixeras"
+  },
+  {
+    "slug": "x",
+    "name": "X / Twitter",
+    "icon": "x-logo.svg",
+    "url": "https://twitter.com/tomasguixeras"
+  },
+  {
+    "slug": "instagram",
+    "name": "Instagram",
+    "icon": "instagram-logo.svg",
+    "url": "https://www.instagram.com/tomasguixeras/"
+  },
+  {
+    "slug": "whatsapp",
+    "name": "WhatsApp",
+    "icon": "whatsapp-logo.svg",
+    "url": "https://wa.me/34637125170"
+  },
+  {
+    "slug": "telegram",
+    "name": "Telegram",
+    "icon": "telegram-logo.svg",
+    "url": "https://t.me/tomasguixeras"
+  },
+  {
+    "slug": "mail",
+    "name": "Mail",
+    "icon": "mail-logo.svg",
+    "url": "mailto:tomasbohngs@gmail.com"
+  }
+]
