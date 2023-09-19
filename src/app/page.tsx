@@ -9,6 +9,7 @@ import ProjectCard from "@/components/ProjectCard";
 import Technologies from "@/components/Technologies";
 import AboutButtons from "@/components/AboutButtons";
 
+import links from "@/data/external-links.json";
 import projects from "@/data/projects.json";
 
 interface projectsStructure {
@@ -20,6 +21,8 @@ interface projectsStructure {
 }
 
 export default function Home() {
+  const heroButtons = links.slice(0, 3);
+
   const [screenSize, setScreenSize] = useState(0);
   const [renderProjects, setRenderProjects] = useState<
     Array<projectsStructure>
@@ -68,18 +71,15 @@ export default function Home() {
             </div>
 
             <div id="icon-buttons-container" className="flex w-fit my-5">
-              <IconButton
-                icon={"linkedin"}
-                url={"https://www.linkedin.com/in/tomasbohnguixeras/"}
-              />
-              <IconButton
-                icon={"github"}
-                url={"https://github.com/tomasguixeras"}
-              />
-              <IconButton
-                icon={"x"}
-                url={"https://twitter.com/tomasguixeras"}
-              />
+              {heroButtons.map((button) => {
+                return (
+                  <IconButton
+                    key={button.slug}
+                    icon={button.icon}
+                    url={button.url}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>

@@ -1,17 +1,21 @@
 import React from "react";
 import Link from "next/link";
 
-import { languageValidator } from "@/utils/languageValidator";
+import {
+  languageValidator,
+  navbarLinks,
+  links,
+} from "@/utils/languageValidator";
 
 import text from "@/data/navbar-text.json";
 
 function DesktopMenu({ userSelectedPage, setUserSelectedPage }: any) {
-  const textToRender = languageValidator(text);
+  const textToRender: links | any = languageValidator(text);
 
   return (
     <div className="flex gap-5 text-md">
       {textToRender &&
-        textToRender.links.map((link) => {
+        textToRender.links.map((link: navbarLinks) => {
           return (
             <Link
               key={link.key}
