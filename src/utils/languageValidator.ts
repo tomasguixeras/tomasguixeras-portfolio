@@ -6,7 +6,7 @@ export interface navbarLinks {
   slug: string;
   link: string;
 }
-interface links {
+export interface links {
   links: navbarLinks[];
 }
 interface navbarText {
