@@ -1,16 +1,22 @@
 import React from "react";
 import Link from "next/link";
 
-import {
-  languageValidator,
-  navbarLinks,
-  links,
-} from "@/utils/languageValidator";
+import { languageValidator } from "@/utils/languageValidator";
+
+import { links, navbarLinks } from "@/types/json-data/navbar-types";
 
 import text from "@/data/navbar-text.json";
 
-function DesktopMenu({ userSelectedPage, setUserSelectedPage }: any) {
-  const textToRender: links | any = languageValidator(text);
+interface DesktopMenuProps {
+  userSelectedPage: string;
+  setUserSelectedPage: React.Dispatch<React.SetStateAction<string>>;
+}
+
+function DesktopMenu({
+  userSelectedPage,
+  setUserSelectedPage,
+}: DesktopMenuProps) {
+  const textToRender: links = languageValidator(text) as links;
 
   return (
     <div className="flex gap-5 text-md">

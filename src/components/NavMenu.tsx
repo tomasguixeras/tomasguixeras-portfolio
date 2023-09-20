@@ -1,9 +1,17 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import AboutButtons from "@/components/AboutButtons";
+
+interface NavMenuProps {
+  openMenu: boolean;
+  setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  handleUserConfig: (toConfig: string) => void;
+  language: string;
+  theme: string;
+}
 
 function NavMenu({
   openMenu,
@@ -11,7 +19,7 @@ function NavMenu({
   handleUserConfig,
   language,
   theme,
-}: any) {
+}: NavMenuProps) {
   return (
     <>
       {openMenu && (

@@ -1,8 +1,12 @@
 import React from "react";
 import Image from "next/image";
 
+interface NavBurgerProps {
+  openMenu: boolean;
+  setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-function NavBurger({openMenu, setOpenMenu}: any) {
+function NavBurger({ openMenu, setOpenMenu }: NavBurgerProps) {
   return (
     <>
       <div className="flex-none">
@@ -29,8 +33,6 @@ function NavBurger({openMenu, setOpenMenu}: any) {
           )}
         </button>
       </div>
-
-      
     </>
   );
 }

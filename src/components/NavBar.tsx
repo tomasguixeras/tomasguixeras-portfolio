@@ -1,19 +1,19 @@
 "use client";
-
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+
+import DesktopMenu from "@/components/DesktopMenu";
+import DesktopCTA from "@/components/DesktopCTA";
 import NavBurger from "@/components/NavBurger";
-import NavMenu from "./NavMenu";
-import DesktopMenu from "./DesktopMenu";
-import DesktopCTA from "./DesktopCTA";
+import NavMenu from "@/components/NavMenu";
 
 function NavBar() {
-  const [userSelectedPage, setUserSelectedPage] = useState("");
-  const [language, setLanguage] = useState("");
-  const [theme, setTheme] = useState("");
-  const [openMenu, setOpenMenu] = useState(false);
-  const [currentWidth, setCurrentWidth] = useState(0);
+  const [userSelectedPage, setUserSelectedPage] = useState<string>("");
+  const [language, setLanguage] = useState<string>("");
+  const [theme, setTheme] = useState<string>("");
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [currentWidth, setCurrentWidth] = useState<number>(0);
 
   const handleUserConfig = (toConfig: string) => {
     if (toConfig === "userLanguage") {
