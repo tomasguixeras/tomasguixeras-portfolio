@@ -3,30 +3,31 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { languageValidator } from "@/utils/languageValidator";
+
 import Footer from "@/components/Footer";
+import Projects from "@/sections/Projects";
 import IconButton from "@/components/IconButton";
 import ProjectCard from "@/components/ProjectCard";
 import Technologies from "@/components/Technologies";
 import AboutButtons from "@/components/AboutButtons";
 
-import links from "@/data/external-links.json";
 import projects from "@/data/projects.json";
+import links from "@/data/external-links.json";
+import aboutData from "@/data/about-texts.json";
 
-interface projectsStructure {
-  id: number;
-  name: string;
-  description: string;
-  image: string;
-  technologies: string[];
-}
+import { AboutInterface, AboutTexts } from "@/types/json-data/about-types";
+import { cardInfo } from "@/types/projects";
 
 export default function Home() {
+  const aboutText = languageValidator(
+    aboutData as AboutInterface
+  ) as AboutTexts;
+
   const heroButtons = links.slice(0, 3);
 
   const [screenSize, setScreenSize] = useState(0);
-  const [renderProjects, setRenderProjects] = useState<
-    Array<projectsStructure>
-  >([]);
+  const [renderProjects, setRenderProjects] = useState<Array<cardInfo>>([]);
 
   useEffect(() => {
     const screen = localStorage.getItem("screen-size");
@@ -91,28 +92,20 @@ export default function Home() {
           <div className="w-full flex flex-row items-center">
             <div className="flex-1 flex flex-col h-fit lg:mr-6">
               <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-6 md:text-4xl">
-                About Me
+                {aboutText.title}
               </h3>
-              <p>
-                Desarrollador junior en constante búsqueda de la simplicidad
-                elegante en la programación y el diseño. <br /> Mi objetivo es
-                crear conexiones virtuales que inspiren y resuelvan problemas.
-              </p>
+              <p>{`${aboutText.description}`}</p>
               {screenSize >= 1024 && (
                 <div className="flex flex-row mt-12">
                   <AboutButtons
-                    icon={"calendly"}
-                    title={"Book a Meeting"}
-                    url={
-                      "https://calendly.com/tomasguixeras/reunion-con-tomas-bohn-guixeras?month=2023-09"
-                    }
+                    icon={aboutText.buttons.calendly.icon}
+                    title={aboutText.buttons.calendly.title}
+                    url={aboutText.buttons.calendly.url}
                   />
                   <AboutButtons
-                    icon={"curriculum"}
-                    title={"Download cv"}
-                    url={
-                      "/curriculum/CV Tomas Bohn Guixeras | Fullstack Developer | Español.pdf"
-                    }
+                    icon={aboutText.buttons.curriculum.icon}
+                    title={aboutText.buttons.curriculum.title}
+                    url={aboutText.buttons.curriculum.url}
                   />
                 </div>
               )}
@@ -131,30 +124,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="Portfolio-section" className="mt-20 w-full lg:mb-20">
-          <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-6 md:text-4xl lg:mb-10">
-            Portfolio
-          </h3>
-          <div className="grid grid-cols-1 gap-2 mb-10 md:gap-4 md:grid-cols-2 lg:grid-cols-3 lg:mb-7">
-            {renderProjects &&
-              renderProjects.map((project) => {
-                return (
-                  <ProjectCard
-                    key={project.id}
-                    name={project.name}
-                    description={project.description}
-                    image={project.image}
-                  />
-                );
-              })}
-          </div>
-          <Link
-            className="underline pl-2 md:text-xl hover:text-slate-200 hover:drop-shadow-white"
-            href="/portfolio"
-          >
-            See more projects
-          </Link>
-        </div>
+        <Projects renderProjects={renderProjects} />
       </main>
       <Footer />
     </div>

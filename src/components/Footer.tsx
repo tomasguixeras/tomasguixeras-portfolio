@@ -1,12 +1,24 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 
 import SocialButton from "./SocialButton";
 import ContactForm from "./ContactForm";
 import IconButton from "./IconButton";
 
+import { languageValidator } from "@/utils/languageValidator";
+
+import { footerTexts } from "@/types/json-data/footer-links";
+
 import links from "@/data/external-links.json";
+import footerText from "@/data/footer-texts.json";
 
 function Footer() {
+  const [texts, setTexts] = useState<any>({});
+  useEffect(() => {
+    setTexts(languageValidator(footerText) as footerTexts);
+  }, [texts]);
+  const validate: number = Object.keys(texts).length;
+
   const mainButtons = links.slice(0, 4);
   const iconButtons = links.slice(4, links.length);
 
@@ -24,7 +36,7 @@ function Footer() {
           <p className="text-lg font-bold mb-4 md:text-2xl">
             Compárteme Tu Historia
           </p>
-          <ContactForm />
+          <ContactForm validate={validate} contactForm={texts.contactForm} />
         </div>
 
         <div className="flex flex-col items-center justify-center w-full lg:w-fit">
