@@ -11,7 +11,7 @@ interface AboutProps {
 }
 
 function About({ screenSize }: AboutProps) {
-  const [aboutText, setAboutText] = useState<AboutTexts | undefined>();
+  const [aboutText, setAboutText] = useState<AboutTexts>();
 
   useEffect(() => {
     setAboutText(languageValidator(aboutData as AboutInterface) as AboutTexts);
@@ -27,16 +27,20 @@ function About({ screenSize }: AboutProps) {
           <p>{aboutText && aboutText.description}</p>
           {screenSize >= 1024 && (
             <div className="flex flex-row mt-12">
-              <AboutButtons
-                icon={aboutText && aboutText.buttons.calendly.icon}
-                title={aboutText && aboutText.buttons.calendly.title}
-                url={aboutText && aboutText.buttons.calendly.url}
-              />
-              <AboutButtons
-                icon={aboutText && aboutText.buttons.curriculum.icon}
-                title={aboutText && aboutText.buttons.curriculum.title}
-                url={aboutText && aboutText.buttons.curriculum.url}
-              />
+              {typeof aboutText !== "undefined" && (
+                <>
+                  <AboutButtons
+                    icon={aboutText.buttons.calendly.icon}
+                    title={aboutText.buttons.calendly.title}
+                    url={aboutText.buttons.calendly.url}
+                  />
+                  <AboutButtons
+                    icon={aboutText.buttons.curriculum.icon}
+                    title={aboutText.buttons.curriculum.title}
+                    url={aboutText.buttons.curriculum.url}
+                  />
+                </>
+              )}
             </div>
           )}
         </div>
