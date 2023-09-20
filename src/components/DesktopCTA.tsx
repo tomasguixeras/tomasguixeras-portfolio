@@ -1,7 +1,13 @@
 import React from "react";
 import Image from "next/image";
 
-function DesktopCTA({ handleUserConfig, language, theme }: any) {
+interface DesktopCTAProps {
+  theme: string;
+  language: string;
+  handleUserConfig: (toConfig: string) => void;
+}
+
+function DesktopCTA({ handleUserConfig, language, theme }: DesktopCTAProps) {
   return (
     <div className="flex gap-4">
       <div>

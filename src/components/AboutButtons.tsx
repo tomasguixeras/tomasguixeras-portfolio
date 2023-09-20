@@ -1,7 +1,13 @@
 import Image from "next/image";
 import React from "react";
 
-function AboutButtons({ icon, title, url }: any) {
+interface AboutButtonsProps {
+  icon: string;
+  title: string;
+  url: string;
+}
+
+function AboutButtons({ icon, title, url }: AboutButtonsProps) {
   return (
     <a
       target="_blank"
