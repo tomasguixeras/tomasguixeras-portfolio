@@ -1,11 +1,9 @@
 import React from "react";
 import Link from "next/link";
 
-import {
-  languageValidator,
-  navbarLinks,
-  links,
-} from "@/utils/languageValidator";
+import { languageValidator } from "@/utils/languageValidator";
+
+import { links, navbarLinks } from "@/types/json-data/navbar-types";
 
 import text from "@/data/navbar-text.json";
 

@@ -1,14 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import { languageValidator } from "@/utils/languageValidator";
 
 import Footer from "@/components/Footer";
 import Projects from "@/sections/Projects";
 import IconButton from "@/components/IconButton";
-import ProjectCard from "@/components/ProjectCard";
 import Technologies from "@/components/Technologies";
 import AboutButtons from "@/components/AboutButtons";
 
