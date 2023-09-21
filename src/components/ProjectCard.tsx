@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { cardInfo } from "@/types/projects";
+import { projectsInfo } from "@/types/projects";
 
-function ProjectCard({ name, description, image }: cardInfo) {
+function ProjectCard({ name, description, image, id }: projectsInfo) {
   return (
     <div className="mb-2 cursor-pointer">
       <div className={"border w-full h-44 rounded-lg overflow-hidden"}>
