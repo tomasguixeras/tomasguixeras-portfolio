@@ -1,7 +1,8 @@
-import NavBar from "@/components/NavBar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Rubik, Roboto_Mono } from "next/font/google";
+
+import NavBar from "@/components/NavBar";
 
 const rubik = Rubik({
   variable: "--display-font",
