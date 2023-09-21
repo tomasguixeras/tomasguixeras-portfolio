@@ -20,6 +20,7 @@ export interface footerTexts {
   title: string;
   contactForm: contactFormTexts;
   linksTitle: string;
+  developed: string;
 }
 export interface footerLanguage {
   spanish: footerTexts;

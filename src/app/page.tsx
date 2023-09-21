@@ -8,29 +8,16 @@ import Projects from "@/sections/Projects";
 import IconButton from "@/components/IconButton";
 import Technologies from "@/components/Technologies";
 
-import projects from "@/data/projects.json";
 import links from "@/data/external-links.json";
-
-import { cardInfo } from "@/types/projects";
 
 export default function Home() {
   const heroButtons = links.slice(0, 3);
 
-  const [screenSize, setScreenSize] = useState(0);
-  const [renderProjects, setRenderProjects] = useState<Array<cardInfo>>([]);
+  const [screenSize, setScreenSize] = useState<number>(0);
 
   useEffect(() => {
     const screen = localStorage.getItem("screen-size");
     screen && setScreenSize(parseInt(screen));
-    if (screen) {
-      if (parseInt(screen) >= 1024) {
-        setRenderProjects(projects.slice(0, 6));
-      } else if (parseInt(screen) <= 640) {
-        setRenderProjects(projects.slice(0, 3));
-      } else {
-        setRenderProjects(projects.slice(0, 4));
-      }
-    }
   }, []);
 
   return (
@@ -78,11 +65,9 @@ export default function Home() {
           <Technologies />
         </div>
 
-        {/* About Secction */}
         <About screenSize={screenSize} />
 
-        {/* Projects Section */}
-        <Projects renderProjects={renderProjects} />
+        <Projects screenSize={screenSize} />
       </main>
       <Footer />
     </div>

@@ -17,7 +17,8 @@
       },
       "submit": "Enviar Mensaje"
     },
-    "linksTitle": "Descubre Más Sobre Mí"
+    "linksTitle": "Descubre Más Sobre Mí",
+    "developed": "Desarrollado por"
   },
   "english": {
     "title": "Let's Build Something Great Together",
@@ -37,6 +38,7 @@
       },
       "submit": "Send Message"
     },
-    "linksTitle": "Discover More About Me"
+    "linksTitle": "Discover More About Me",
+    "developed": "Developed by"
   }
 }
