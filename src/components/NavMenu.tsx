@@ -5,6 +5,12 @@ import Image from "next/image";
 
 import AboutButtons from "@/components/AboutButtons";
 
+import { languageValidator } from "@/utils/languageValidator";
+
+import { links } from "@/types/json-data/navbar-types";
+
+import text from "@/data/navbar-text.json";
+
 interface NavMenuProps {
   openMenu: boolean;
   setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -20,6 +26,7 @@ function NavMenu({
   language,
   theme,
 }: NavMenuProps) {
+  const textToRender: links = languageValidator(text) as links;
   return (
     <>
       {openMenu && (
@@ -32,34 +39,17 @@ function NavMenu({
             className="flex flex-col items-center w-5/6 font-display text-xl italic"
             onClick={() => handleUserConfig("userTheme")}
           >
-            <Link
-              onClick={() => setOpenMenu(!openMenu)}
-              href="/services"
-              className="py-4 w-full max-w-lg"
-            >
-              Services
-            </Link>
-            <Link
-              onClick={() => setOpenMenu(!openMenu)}
-              href="/portfolio"
-              className="py-4 w-full max-w-lg"
-            >
-              Portfolio
-            </Link>
-            <Link
-              onClick={() => setOpenMenu(!openMenu)}
-              href="/blog"
-              className="py-4 w-full max-w-lg"
-            >
-              Blog
-            </Link>
-            <Link
-              onClick={() => setOpenMenu(!openMenu)}
-              href="#contact"
-              className="py-4 w-full max-w-lg"
-            >
-              Contact
-            </Link>
+            {textToRender &&
+              textToRender.links.map((link) => (
+                <Link
+                  key={link.key}
+                  onClick={() => setOpenMenu(!openMenu)}
+                  href={link.link}
+                  className="py-4 w-full max-w-lg"
+                >
+                  {link.name}
+                </Link>
+              ))}
           </div>
 
           <div
@@ -91,7 +81,10 @@ function NavMenu({
             <div>
               <button
                 className="btn btn-square btn-ghost h-10 w-auto"
-                onClick={() => handleUserConfig("userLanguage")}
+                onClick={() => {
+                  handleUserConfig("userLanguage");
+                  setOpenMenu(!openMenu);
+                }}
               >
                 {language === "ENG" ? (
                   <Image
@@ -113,7 +106,10 @@ function NavMenu({
               </button>
             </div>
             <div>
-              <button className="btn btn-square btn-ghost h-10 w-auto">
+              <button
+                className="btn btn-square btn-ghost h-10 w-auto"
+                onClick={() => setOpenMenu(!openMenu)}
+              >
                 {theme === "DARK" ? (
                   <Image
                     src="/color-schema/sun-light-mode.svg"
