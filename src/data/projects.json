@@ -7,28 +7,32 @@
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
       {
         "id": 2,
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
       {
         "id": 3,
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
       {
         "id": 4,
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
       {
         "id": 5,
@@ -49,14 +53,16 @@
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
       {
         "id": 8,
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       }
     ],
     "moreProjects": "Ver todos los proyectos"
@@ -69,56 +75,64 @@
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
       {
         "id": 2,
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
       {
         "id": 3,
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
       {
         "id": 4,
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
       {
         "id": 5,
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
       {
         "id": 6,
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
       {
         "id": 7,
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
       {
         "id": 8,
         "name": "Project Name",
         "description": "Landing Page",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
-        "technologies": ["Javascript", "React", "Redux"]
+        "technologies": ["Javascript", "React", "Redux"],
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       }
     ],
     "moreProjects": "See all projects"
