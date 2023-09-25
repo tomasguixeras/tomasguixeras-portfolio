@@ -4,6 +4,7 @@ export interface projectsInfo {
   description: string;
   image: string;
   technologies?: string[];
+  link: string;
 }
 
 export interface portfolioTexts {

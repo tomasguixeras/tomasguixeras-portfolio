@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "@/components/ProjectCard";
-import { portfolioTexts, projectsInfo } from "@/types/projects";
+import {
+  portfolioTexts,
+  projectsInfo,
+  portfolioLanguage,
+} from "@/types/projects";
 import Link from "next/link";
 import { languageValidator } from "@/utils/languageValidator";
 import portfolioData from "@/data/projects.json";
@@ -14,7 +18,9 @@ function Projects({ screenSize }: projectsProps) {
   const [renderProjects, setRenderProjects] = useState<Array<projectsInfo>>();
 
   useEffect(() => {
-    setPortfolioInfo(languageValidator(portfolioData) as portfolioTexts);
+    setPortfolioInfo(
+      languageValidator(portfolioData as portfolioLanguage) as portfolioTexts
+    );
     if (screenSize && portfolioInfo) {
       if (screenSize >= 1024) {
         setRenderProjects(portfolioInfo.projects.slice(0, 6));
@@ -43,6 +49,7 @@ function Projects({ screenSize }: projectsProps) {
                     name={project.name}
                     description={project.description}
                     image={project.image}
+                    link={project.link}
                   />
                 );
               })}
