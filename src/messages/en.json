@@ -89,57 +89,57 @@
   },
   "Portfolio": {
     "title": "Portafolio",
-    "projects": [
-      {
-        "id": 1,
+    "projects": {
+      "HenryDogApp": {
+        "id": "1",
         "name": "Henry Dog App",
         "description": "Fullstack PERN App",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
         "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
-      {
-        "id": 2,
+      "MarketsCenter": {
+        "id": "2",
         "name": "Henry Dog App",
         "description": "Fullstack PERN App",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
         "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
-      {
-        "id": 3,
+      "42iCripto": {
+        "id": "3",
         "name": "Henry Dog App",
         "description": "Fullstack PERN App",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
         "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
-      {
-        "id": 4,
+      "ColorTester": {
+        "id": "4",
         "name": "Henry Dog App",
         "description": "Fullstack PERN App",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
         "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
-      {
-        "id": 5,
+      "gamePlugins": {
+        "id": "5",
         "name": "Henry Dog App",
         "description": "Fullstack PERN App",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
         "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
-      {
-        "id": 6,
+      "reverseWords": {
+        "id": "6",
         "name": "Henry Dog App",
         "description": "Fullstack PERN App",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
         "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
-      {
-        "id": 7,
+      "extra": {
+        "id": "7",
         "name": "Henry Dog App",
         "description": "Fullstack PERN App",
         "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
         "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       }
-    ],
+    },
     "moreProjects": "See more projects"
   },
   "Footer": {
