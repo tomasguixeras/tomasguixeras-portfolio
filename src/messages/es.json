@@ -28,46 +28,46 @@
     ]
   },
   "MobileNavbar": {
-    "navegation": [
-      {
+    "navegation": {
+      "services": {
         "key": "01",
         "name": "Servicios",
         "slug": "services",
         "link": "/services"
       },
-      {
+      "portfolio": {
         "key": "02",
         "name": "Portfolio",
         "slug": "portfolio",
         "link": "/portfolio"
       },
-      {
+      "blog": {
         "key": "03",
         "name": "Blog",
         "slug": "blog",
         "link": "/blog"
       },
-      {
+      "contact": {
         "key": "04",
         "name": "Contacto",
         "slug": "contact",
         "link": "/#contact"
       }
-    ],
-    "actionButtons": [
-      {
+    },
+    "actionButtons": {
+      "calendly": {
         "key": "01",
         "icon": "calendly",
         "title": "Agenda una reunion",
         "url": "https://calendly.com/tomasguixeras/reunion-con-tomas-bohn-guixeras?month=2023-09"
       },
-      {
+      "curriculum": {
         "key": "02",
         "icon": "curriculum",
         "title": "Descarga mi cv",
         "url": "/curriculum/CV Tomas Bohn Guixeras | Fullstack Developer | Español.pdf"
       }
-    ]
+    }
   },
   "About": {
     "title": "Acerca de",
@@ -166,5 +166,12 @@
       }
     },
     "signing": "Desarrollado por"
+  },
+  "UnderWork": {
+    "title": "Esta pagina se encuentra en construcción.",
+    "subTitle": "Estara disponible a la brevedad.",
+    "moreInfo": "Necesitas más información?",
+    "contact": "Contáctame",
+    "goHome": "Regresar a vista principal"
   }
 }
