@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { projectsInfo } from "@/types/projects";
 
-function ProjectCard({ name, description, image, id, link }: projectsInfo) {
+function ProjectCard({ name, description, image, link }: projectsInfo) {
   return (
     <a href={link} className="mb-2 cursor-pointer">
       <div className={"border w-full h-44 rounded-lg overflow-hidden"}>

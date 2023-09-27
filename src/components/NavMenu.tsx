@@ -1,15 +1,11 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+import NextLink from "next-intl/link";
 import Image from "next/image";
 
 import AboutButtons from "@/components/AboutButtons";
-
-import { languageValidator } from "@/utils/languageValidator";
-
-import { links } from "@/types/json-data/navbar-types";
-
-import text from "@/data/navbar-text.json";
 
 interface NavMenuProps {
   openMenu: boolean;
@@ -23,10 +19,13 @@ function NavMenu({
   openMenu,
   setOpenMenu,
   handleUserConfig,
-  language,
   theme,
 }: NavMenuProps) {
-  const textToRender: links = languageValidator(text) as links;
+  const language = useLocale();
+  const t = useTranslations("MobileNavbar");
+  const navegation = ["services", "portfolio", "blog", "contact"] as const;
+  const actions = ["calendly", "curriculum"] as const;
+
   return (
     <>
       {openMenu && (
@@ -39,17 +38,16 @@ function NavMenu({
             className="flex flex-col items-center w-5/6 font-display text-xl italic"
             onClick={() => handleUserConfig("userTheme")}
           >
-            {textToRender &&
-              textToRender.links.map((link) => (
-                <Link
-                  key={link.key}
-                  onClick={() => setOpenMenu(!openMenu)}
-                  href={link.link}
-                  className="py-4 w-full max-w-lg"
-                >
-                  {link.name}
-                </Link>
-              ))}
+            {navegation.map((link: string) => (
+              <Link
+                key={link}
+                onClick={() => setOpenMenu(!openMenu)}
+                href={t(`navegation.${link}.link`)}
+                className="py-4 w-full max-w-lg"
+              >
+                {t(`navegation.${link}.name`)}
+              </Link>
+            ))}
           </div>
 
           <div
@@ -57,20 +55,16 @@ function NavMenu({
             className="flex flex-col w-5/6 items-center p-7"
             onClick={(e) => e.stopPropagation()}
           >
-            <AboutButtons
-              icon={"calendly"}
-              title={"Book a Meeting"}
-              url={
-                "https://calendly.com/tomasguixeras/reunion-con-tomas-bohn-guixeras?month=2023-09"
-              }
-            />
-            <AboutButtons
-              icon={"curriculum"}
-              title={"Download cv"}
-              url={
-                "/curriculum/CV Tomas Bohn Guixeras | Fullstack Developer | Español.pdf"
-              }
-            />
+            {actions.map((action: string) => {
+              return (
+                <AboutButtons
+                  key={action}
+                  icon={t(`actionButtons.${action}.icon`)}
+                  title={t(`actionButtons.${action}.title`)}
+                  url={t(`actionButtons.${action}.url`)}
+                />
+              );
+            })}
           </div>
 
           <div
@@ -82,26 +76,29 @@ function NavMenu({
               <button
                 className="btn btn-square btn-ghost h-10 w-auto"
                 onClick={() => {
-                  handleUserConfig("userLanguage");
                   setOpenMenu(!openMenu);
                 }}
               >
-                {language === "ENG" ? (
-                  <Image
-                    src="/languages/spain-flag.svg"
-                    alt="Change language to Spanish"
-                    height={20}
-                    width={20}
-                    className="h-8 w-8"
-                  />
+                {language === "en" ? (
+                  <NextLink href="/" locale="es">
+                    <Image
+                      src="/languages/spain-flag.svg"
+                      alt="Change language to Spanish"
+                      height={20}
+                      width={20}
+                      className="h-8 w-8"
+                    />
+                  </NextLink>
                 ) : (
-                  <Image
-                    src="/languages/us-flag.svg"
-                    alt="Change language to English"
-                    height={20}
-                    width={20}
-                    className="h-8 w-8"
-                  />
+                  <NextLink href="/" locale="en">
+                    <Image
+                      src="/languages/us-flag.svg"
+                      alt="Change language to English"
+                      height={20}
+                      width={20}
+                      className="h-8 w-8"
+                    />
+                  </NextLink>
                 )}
               </button>
             </div>

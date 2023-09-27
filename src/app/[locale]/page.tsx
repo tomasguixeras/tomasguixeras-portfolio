@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 import About from "@/sections/About";
@@ -11,6 +12,8 @@ import Technologies from "@/components/Technologies";
 import links from "@/data/external-links.json";
 
 export default function Home() {
+  // const t = useTranslations("Index");
+
   const heroButtons = links.slice(0, 3);
 
   const [screenSize, setScreenSize] = useState<number>(0);
