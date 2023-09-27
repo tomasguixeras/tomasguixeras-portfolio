@@ -1,0 +1,170 @@
+{
+  "DesktopNavbar": {
+    "navegation": [
+      {
+        "key": "01",
+        "name": "Services",
+        "slug": "services",
+        "link": "/services"
+      },
+      {
+        "key": "02",
+        "name": "Portfolio",
+        "slug": "portfolio",
+        "link": "/portfolio"
+      },
+      {
+        "key": "03",
+        "name": "Blog",
+        "slug": "blog",
+        "link": "/blog"
+      },
+      {
+        "key": "04",
+        "name": "Contact",
+        "slug": "contact",
+        "link": "/#contact"
+      }
+    ]
+  },
+  "MobileNavbar": {
+    "navegation": [
+      {
+        "key": "01",
+        "name": "Services",
+        "slug": "services",
+        "link": "/services"
+      },
+      {
+        "key": "02",
+        "name": "Portfolio",
+        "slug": "portfolio",
+        "link": "/portfolio"
+      },
+      {
+        "key": "03",
+        "name": "Blog",
+        "slug": "blog",
+        "link": "/blog"
+      },
+      {
+        "key": "04",
+        "name": "Contact",
+        "slug": "contact",
+        "link": "/#contact"
+      }
+    ],
+    "actionButtons": [
+      {
+        "key": "01",
+        "icon": "calendly",
+        "title": "Book a Meeting",
+        "url": "https://calendly.com/tomasguixeras/reunion-con-tomas-bohn-guixeras?month=2023-09"
+      },
+      {
+        "key": "02",
+        "icon": "curriculum",
+        "title": "Download CV",
+        "url": "/curriculum/CV Tomas Bohn Guixeras | Fullstack Developer | English.pdf"
+      }
+    ]
+  },
+  "About": {
+    "title": "About Me",
+    "text": "Junior developer in constant search for elegant simplicity in programming and design. Constantly learning to be able to offer the best service to my clients. My goal is to create virtual connections that inspire and solve problems.",
+    "actionButtons": {
+      "calendly": {
+        "key": "01",
+        "icon": "calendly",
+        "title": "Book a Meeting",
+        "url": "https://calendly.com/tomasguixeras/reunion-con-tomas-bohn-guixeras?month=2023-09"
+      },
+      "curriculum": {
+        "key": "02",
+        "icon": "curriculum",
+        "title": "Download CV",
+        "url": "/curriculum/CV Tomas Bohn Guixeras | Fullstack Developer | English.pdf"
+      }
+    }
+  },
+  "Portfolio": {
+    "title": "Portafolio",
+    "projects": [
+      {
+        "id": 1,
+        "name": "Henry Dog App",
+        "description": "Fullstack PERN App",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
+      },
+      {
+        "id": 2,
+        "name": "Henry Dog App",
+        "description": "Fullstack PERN App",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
+      },
+      {
+        "id": 3,
+        "name": "Henry Dog App",
+        "description": "Fullstack PERN App",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
+      },
+      {
+        "id": 4,
+        "name": "Henry Dog App",
+        "description": "Fullstack PERN App",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
+      },
+      {
+        "id": 5,
+        "name": "Henry Dog App",
+        "description": "Fullstack PERN App",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
+      },
+      {
+        "id": 6,
+        "name": "Henry Dog App",
+        "description": "Fullstack PERN App",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
+      },
+      {
+        "id": 7,
+        "name": "Henry Dog App",
+        "description": "Fullstack PERN App",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1653403709/Portfolio/Screen_Shot_2022-05-24_at_11.47.51_yrpmt0.png",
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
+      }
+    ],
+    "moreProjects": "See more projects"
+  },
+  "Footer": {
+    "title": "Let's Build Something Great Together",
+    "externalLinks": {
+      "title": "Discover More About Me"
+    },
+    "contactForm": {
+      "title": "Share Your Story",
+      "formTexts": {
+        "nameInput": {
+          "label": "Name",
+          "placeholder": "Enter name..."
+        },
+        "emailInput": {
+          "label": "Email",
+          "placeholder": "ejemplo@email.com"
+        },
+        "textInput": {
+          "label": "Message",
+          "placeholder": "Write your message here..."
+        },
+        "sendForm": "Send Message"
+      }
+    },
+    "signing": "Developed by"
+  }
+}
