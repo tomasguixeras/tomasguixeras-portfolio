@@ -7,20 +7,17 @@ import Image from "next/image";
 
 import AboutButtons from "@/components/AboutButtons";
 
+import Moon from "./svgComponents/moon";
+import Sun from "./svgComponents/Sun";
+
 interface NavMenuProps {
   openMenu: boolean;
   setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
-  handleUserConfig: (toConfig: string) => void;
-  language: string;
-  theme: string;
+  theme: string | undefined;
+  setTheme: (theme: string) => void;
 }
 
-function NavMenu({
-  openMenu,
-  setOpenMenu,
-  handleUserConfig,
-  theme,
-}: NavMenuProps) {
+function NavMenu({ openMenu, setOpenMenu, theme, setTheme }: NavMenuProps) {
   const language = useLocale();
   const t = useTranslations("MobileNavbar");
   const navegation = ["services", "portfolio", "blog", "contact"] as const;
@@ -31,12 +28,11 @@ function NavMenu({
       {openMenu && (
         <div
           onClick={() => setOpenMenu(!openMenu)}
-          className="w-11/12 h-[calc(100dvh-90px)] bg-[#242531] flex flex-col items-center justify-evenly z-10"
+          className="w-11/12 h-[calc(100dvh-90px)] bg-[#f4f2ee] flex flex-col items-center justify-evenly z-10 dark:bg-[#242531]"
         >
           <div
             id="sections"
             className="flex flex-col items-center w-5/6 font-display text-xl italic"
-            onClick={() => handleUserConfig("userTheme")}
           >
             {navegation.map((link: string) => (
               <Link
@@ -107,22 +103,28 @@ function NavMenu({
                 className="btn btn-square btn-ghost h-10 w-auto"
                 onClick={() => setOpenMenu(!openMenu)}
               >
-                {theme === "DARK" ? (
-                  <Image
-                    src="/color-schema/sun-light-mode.svg"
-                    alt="Change language to Spanish"
-                    height={20}
-                    width={20}
-                    className="h-8 w-8"
-                  />
+                {theme === "dark" ? (
+                  <div
+                    onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
+                  >
+                    <Sun
+                      color={theme === "dark" ? "#FFFFFF" : "#121212"}
+                      className="h-8 w-8"
+                    />
+                  </div>
                 ) : (
-                  <Image
-                    src="/color-schema/moon-dark-mode.svg"
-                    alt="Change language to English"
-                    height={20}
-                    width={20}
-                    className="h-8 w-8"
-                  />
+                  <div
+                    onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
+                  >
+                    <Moon
+                      color={theme === "dark" ? "#FFFFFF" : "#121212"}
+                      className="h-8 w-8"
+                    />
+                  </div>
                 )}
               </button>
             </div>

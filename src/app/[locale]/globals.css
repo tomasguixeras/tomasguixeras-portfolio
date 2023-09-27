@@ -2,17 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: #FFFFFF;
   --main-background-color: #242531;
   --secondary-background-color: #333544;
-}
+} */
 
 body {
   margin: 0px;
   padding: 0px;
-  color: var(--foreground-rgb);
-  background: var(--main-background-color);
+  /* color: var(--foreground-rgb);
+  background: var(--main-background-color); */
+}
+.bg-dark-main{
+  background-color: #252531;
 }
 
 .clip-path-desktop {

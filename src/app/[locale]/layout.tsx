@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { Rubik, Roboto_Mono } from "next/font/google";
+import { ThemeProvider } from "../theme-provider";
 
 import NavBar from "@/components/NavBar";
 
@@ -41,11 +42,13 @@ export default async function RootLayout({
   }
   return (
     <html className={`${rubik.variable} ${roboto.variable}`} lang={locale}>
-      <body className="flex flex-col items-center font-body">
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <NavBar />
-          {children}
-        </NextIntlClientProvider>
+      <body className="flex flex-col items-center font-body bg-[#f4f2ee] text-[#242531] dark:bg-[#242531] dark:text-white">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <NavBar />
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

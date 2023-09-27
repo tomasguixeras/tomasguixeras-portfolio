@@ -4,20 +4,16 @@ import Link from "next-intl/link";
 import { useLocale } from "next-intl";
 
 interface DesktopCTAProps {
-  theme: string;
-  language: string;
-  handleUserConfig: (toConfig: string) => void;
+  theme: string | undefined;
+  setTheme: (theme: string) => void;
 }
 
-function DesktopCTA({ handleUserConfig, theme }: DesktopCTAProps) {
-  const language = useLocale()
+function DesktopCTA({ theme, setTheme }: DesktopCTAProps) {
+  const language = useLocale();
   return (
     <div className="flex gap-4">
       <div>
-        <button
-          className="btn btn-square btn-ghost h-10 w-auto"
-          // onClick={() => handleUserConfig("userLanguage")}
-        >
+        <button className="btn btn-square btn-ghost h-10 w-auto">
           {language === "en" ? (
             <Link href="/" locale="es">
               <Image
@@ -44,20 +40,22 @@ function DesktopCTA({ handleUserConfig, theme }: DesktopCTAProps) {
       <div>
         <button
           className="btn btn-square btn-ghost h-10 w-auto"
-          onClick={() => handleUserConfig("userTheme")}
+          // onClick={() => handleUserConfig("userTheme")}
         >
-          {theme === "DARK" ? (
+          {theme === "dark" ? (
             <Image
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               src="/color-schema/sun-light-mode.svg"
-              alt="Change language to Spanish"
+              alt="Theme change button to light"
               height={20}
               width={20}
               className="h-8 w-8"
             />
           ) : (
             <Image
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               src="/color-schema/moon-dark-mode.svg"
-              alt="Change language to English"
+              alt="Theme change button to dark"
               height={20}
               width={20}
               className="h-8 w-8"

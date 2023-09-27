@@ -7,6 +7,7 @@ const config: Config = {
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     fontFamily: {
       display: "var(--display-font)",
