@@ -7,7 +7,11 @@ function ProjectCard({ name, description, image, link }: projectsInfo) {
     <a href={link} className="mb-2 cursor-pointer">
       <div className={"border w-full h-44 rounded-lg overflow-hidden"}>
         <Image
-          src="/demo-full-page.png"
+          src={
+            image !== ""
+              ? image
+              : "https://res.cloudinary.com/tomyboohngs/image/upload/v1695897168/Under_1_n1om4t.png"
+          }
           alt="demo"
           width={500}
           height={500}
