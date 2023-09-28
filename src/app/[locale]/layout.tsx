@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description:
     "Javascript / Typescript Fullstack Developer | React - Redux - Node Js - Express Js - Postgre SQL",
   alternates: {
-    canonical: "tomasguixeras.vercel.app",
+    canonical: "https://tomasguixeras.vercel.app/",
   },
 };
 
