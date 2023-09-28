@@ -11,7 +11,7 @@
         "key": "02",
         "name": "Portfolio",
         "slug": "portfolio",
-        "link": "/portfolio"
+        "link": "/#portfolio"
       },
       {
         "key": "03",
@@ -39,7 +39,7 @@
         "key": "02",
         "name": "Portfolio",
         "slug": "portfolio",
-        "link": "/portfolio"
+        "link": "/#portfolio"
       },
       "blog": {
         "key": "03",
