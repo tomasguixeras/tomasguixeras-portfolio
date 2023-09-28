@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "Tomas Bohn Guixeras | Javascript / Typescript Fullstack Developer",
   description:
     "Javascript / Typescript Fullstack Developer | React - Redux - Node Js - Express Js - Postgre SQL",
+  alternates: {
+    canonical: "tomasguixeras.vercel.app",
+  },
 };
 
 export default async function RootLayout({
