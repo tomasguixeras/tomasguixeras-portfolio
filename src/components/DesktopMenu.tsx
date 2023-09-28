@@ -1,11 +1,6 @@
 import React from "react";
 import Link from "next/link";
-
-import { languageValidator } from "@/utils/languageValidator";
-
-import { links, navbarLinks } from "@/types/json-data/navbar-types";
-
-import text from "@/data/navbar-text.json";
+import { useTranslations } from "next-intl";
 
 interface DesktopMenuProps {
   userSelectedPage: string;
@@ -16,27 +11,27 @@ function DesktopMenu({
   userSelectedPage,
   setUserSelectedPage,
 }: DesktopMenuProps) {
-  const textToRender: links = languageValidator(text) as links;
+  const t = useTranslations("MobileNavbar");
+  const navegation = ["services", "portfolio", "blog", "contact"] as const;
 
   return (
     <div className="flex gap-5 text-md">
-      {textToRender &&
-        textToRender.links.map((link: navbarLinks) => {
-          return (
-            <Link
-              key={link.key}
-              onClick={() => setUserSelectedPage(link.slug)}
-              href={link.link}
-              className={
-                userSelectedPage === link.slug
-                  ? "text-yellow-400 drop-shadow-xl italic"
-                  : ""
-              }
-            >
-              {link.name}
-            </Link>
-          );
-        })}
+      {navegation.map((link: string) => {
+        return (
+          <Link
+            key={link}
+            onClick={() => setUserSelectedPage(t(`navegation.${link}.slug`))}
+            href={t(`navegation.${link}.link`)}
+            className={
+              userSelectedPage === t(`navegation.${link}.slug`)
+                ? "text-yellow-400 drop-shadow-xl italic"
+                : ""
+            }
+          >
+            {t(`navegation.${link}.name`)}
+          </Link>
+        );
+      })}
     </div>
   );
 }

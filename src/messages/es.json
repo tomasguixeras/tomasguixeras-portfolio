@@ -1,0 +1,177 @@
+{
+  "DesktopNavbar": {
+    "navegation": [
+      {
+        "key": "01",
+        "name": "Servicios",
+        "slug": "services",
+        "link": "/services"
+      },
+      {
+        "key": "02",
+        "name": "Portfolio",
+        "slug": "portfolio",
+        "link": "/portfolio"
+      },
+      {
+        "key": "03",
+        "name": "Blog",
+        "slug": "blog",
+        "link": "/blog"
+      },
+      {
+        "key": "04",
+        "name": "Contacto",
+        "slug": "contact",
+        "link": "/#contact"
+      }
+    ]
+  },
+  "MobileNavbar": {
+    "navegation": {
+      "services": {
+        "key": "01",
+        "name": "Servicios",
+        "slug": "services",
+        "link": "/services"
+      },
+      "portfolio": {
+        "key": "02",
+        "name": "Portfolio",
+        "slug": "portfolio",
+        "link": "/portfolio"
+      },
+      "blog": {
+        "key": "03",
+        "name": "Blog",
+        "slug": "blog",
+        "link": "/blog"
+      },
+      "contact": {
+        "key": "04",
+        "name": "Contacto",
+        "slug": "contact",
+        "link": "/#contact"
+      }
+    },
+    "actionButtons": {
+      "calendly": {
+        "key": "01",
+        "icon": "calendly",
+        "title": "Agenda una reunion",
+        "url": "https://calendly.com/tomasguixeras/reunion-con-tomas-bohn-guixeras?month=2023-09"
+      },
+      "curriculum": {
+        "key": "02",
+        "icon": "curriculum",
+        "title": "Descarga mi cv",
+        "url": "/curriculum/CV Tomas Bohn Guixeras | Fullstack Developer | Español.pdf"
+      }
+    }
+  },
+  "About": {
+    "title": "Acerca de",
+    "text": "Desarrollador junior en constante búsqueda de la simplicidad elegante en la programación y el diseño. En constante aprendizaje para poder ofrecer el mejor servicio a mis clientes. Mi objetivo es crear conexiones virtuales que inspiren y resuelvan problemas.",
+    "actionButtons": {
+      "calendly": {
+        "key": "cta-01",
+        "icon": "calendly",
+        "title": "Agenda una reunion",
+        "url": "https://calendly.com/tomasguixeras/reunion-con-tomas-bohn-guixeras?month=2023-09"
+      },
+      "curriculum": {
+        "key": "cta-02",
+        "icon": "curriculum",
+        "title": "Descarga mi cv",
+        "url": "/curriculum/CV Tomas Bohn Guixeras | Fullstack Developer | Español.pdf"
+      }
+    }
+  },
+  "Portfolio": {
+    "title": "Portafolio",
+    "projects": {
+      "HenryDogApp": {
+        "id": "1",
+        "name": "Henry Dog App",
+        "description": "Fullstack PERN App",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1695898766/5_gy07fm.png",
+        "link": "https://github.com/tomasguixeras/PI-Dogs-App"
+      },
+      "MarketsCenter": {
+        "id": "2",
+        "name": "Markets Center",
+        "description": "Fullstack MERN App",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1695898765/6_bflmsl.png",
+        "link": "https://github.com/tomasguixeras/markets-center-client"
+      },
+      "42iCripto": {
+        "id": "3",
+        "name": "App de seguimiento de Criptos",
+        "description": "React Native Expo App",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1695897168/Under_1_n1om4t.png",
+        "link": "https://github.com/tomasguixeras/expo-criptoApp"
+      },
+      "ColorTester": {
+        "id": "4",
+        "name": "Probador de colores para UI",
+        "description": "Frontend App con Vite",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1695898765/3_e4baeg.png",
+        "link": "https://github.com/tomasguixeras/color-selector"
+      },
+      "reverseWords": {
+        "id": "6",
+        "name": "Validador de palindromos",
+        "description": "Fullstack PERN App",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1695897168/Under_1_n1om4t.png",
+        "link": "https://github.com/tomasguixeras/fullstack-palindrome-app"
+      },
+      "tomasGuixeras": {
+        "id": "7",
+        "name": "Tomas Guixeras | Portfolio",
+        "description": "Portafolio profesional en Next Js",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1695898766/2_qnbysr.png",
+        "link": "https://github.com/tomasguixeras/tomasguixeras-portfolio"
+      },
+      "gamePlugins": {
+        "id": "5",
+        "name": "Gatien Salaun",
+        "description": "Landing Page",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1695898766/4_mqgtd7.png",
+        "link": "https://github.com/tomasguixeras/luxury-presence-landing"
+      }
+    },
+    "moreProjects": "Ver todos los proyectos"
+  },
+  "Footer": {
+    "title": "Construyamos Algo Grandioso Juntos",
+    "externalLinks": {
+      "title": "Descubre Más Sobre Mí"
+    },
+    "contactForm": {
+      "title": "Compárteme Tu Historia",
+      "formTexts": {
+        "nameInput": {
+          "label": "Nombre",
+          "placeholder": "Introducir Nombre..."
+        },
+        "emailInput": {
+          "label": "Email",
+          "placeholder": "ejemplo@email.com"
+        },
+        "textInput": {
+          "label": "Mensaje",
+          "placeholder": "Introducir Mensaje..."
+        },
+        "sendForm": "Enviar Mensaje"
+      }
+    },
+    "signing": "Desarrollado por"
+  },
+  "UnderWork": {
+    "title": "Esta pagina se encuentra en construcción.",
+    "subTitle": "Estara disponible a la brevedad.",
+    "moreInfo": "Necesitas más información?",
+    "contact": "Contáctame",
+    "goHome": "Regresar a vista principal"
+  }
+}

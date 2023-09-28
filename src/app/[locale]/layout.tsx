@@ -1,8 +1,14 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
 import { Rubik, Roboto_Mono } from "next/font/google";
 
 import NavBar from "@/components/NavBar";
+
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "es" }];
+}
 
 const rubik = Rubik({
   variable: "--display-font",
@@ -20,16 +26,26 @@ export const metadata: Metadata = {
     "Javascript / Typescript Fullstack Developer | React - Redux - Node Js - Express Js - Postgre SQL",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+  params: { locale },
+}: any) {
+  // {
+  //   children: React.ReactNode;
+  // }
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
   return (
-    <html className={`${rubik.variable} ${roboto.variable}`} lang="en">
+    <html className={`${rubik.variable} ${roboto.variable}`} lang={locale}>
       <body className="flex flex-col items-center font-body">
-        <NavBar />
-        {children}
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <NavBar />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
