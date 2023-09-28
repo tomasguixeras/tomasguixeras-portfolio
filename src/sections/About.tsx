@@ -21,7 +21,7 @@ function About({ screenSize }: AboutProps) {
   }, []);
 
   return (
-    <div id="about-section" className="mt-20 w-full">
+    <div id="services" className="mt-20 w-full">
       <div className="w-full flex flex-row items-center">
         <div className="flex-1 flex flex-col h-fit lg:mr-6">
           <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-6 md:text-4xl">

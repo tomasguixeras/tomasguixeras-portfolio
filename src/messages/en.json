@@ -33,7 +33,7 @@
         "key": "01",
         "name": "Services",
         "slug": "services",
-        "link": "/services"
+        "link": "/#services"
       },
       "portfolio": {
         "key": "02",
