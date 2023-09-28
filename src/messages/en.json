@@ -108,7 +108,7 @@
         "id": "3",
         "name": "Cripto Tracking App",
         "description": "React Native Expo App",
-        "image": "",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1695897168/Under_1_n1om4t.png",
         "link": "https://github.com/tomasguixeras/expo-criptoApp"
       },
       "ColorTester": {
@@ -122,7 +122,7 @@
         "id": "6",
         "name": "Palindrome validator",
         "description": "Fullstack PERN App",
-        "image": "",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1695897168/Under_1_n1om4t.png",
         "link": "https://github.com/tomasguixeras/fullstack-palindrome-app"
       },
       "tomasGuixeras": {
