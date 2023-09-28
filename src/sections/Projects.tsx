@@ -14,9 +14,9 @@ function Projects({ screenSize }: projectsProps) {
     "MarketsCenter",
     "42iCripto",
     "ColorTester",
-    "gamePlugins",
     "reverseWords",
-    "extra",
+    "tomasGuixeras",
+    "gamePlugins",
   ];
 
   const [renderProjects, setRenderProjects] = useState<Array<string>>(keys);
