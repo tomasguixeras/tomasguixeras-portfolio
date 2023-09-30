@@ -3,14 +3,8 @@ import Image from "next/image";
 import Link from "next-intl/link";
 import { useLocale } from "next-intl";
 
-interface DesktopCTAProps {
-  theme: string;
-  language: string;
-  handleUserConfig: (toConfig: string) => void;
-}
-
-function DesktopCTA({ handleUserConfig, theme }: DesktopCTAProps) {
-  const language = useLocale()
+function DesktopCTA() {
+  const language = useLocale();
   return (
     <div className="flex gap-4">
       <div>
@@ -44,9 +38,9 @@ function DesktopCTA({ handleUserConfig, theme }: DesktopCTAProps) {
       <div>
         <button
           className="btn btn-square btn-ghost h-10 w-auto"
-          onClick={() => handleUserConfig("userTheme")}
+          // onClick={() => handleUserConfig("userTheme")}
         >
-          {theme === "DARK" ? (
+          {"DARK" === "DARK" ? (
             <Image
               src="/color-schema/sun-light-mode.svg"
               alt="Change language to Spanish"
