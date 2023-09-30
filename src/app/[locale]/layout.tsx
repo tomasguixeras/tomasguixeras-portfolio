@@ -44,7 +44,7 @@ export default async function RootLayout({ children, params }: layoutProps) {
   }
   return (
     <html className={`${rubik.variable} ${roboto.variable}`} lang={locale}>
-      <body className="flex flex-col items-center font-body">
+      <body className="flex flex-col items-center font-body max-w-screen-2xl m-auto">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <NavBar />
           {children}

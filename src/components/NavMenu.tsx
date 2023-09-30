@@ -44,7 +44,7 @@ function NavMenu({ openMenu, setOpenMenu }: NavMenuProps) {
 
           <div
             id="cta-button"
-            className="flex flex-col w-5/6 items-center p-7"
+            className="flex flex-col w-11/12 items-center p-7 gap-7"
             onClick={(e) => e.stopPropagation()}
           >
             {actions.map((action: string) => {

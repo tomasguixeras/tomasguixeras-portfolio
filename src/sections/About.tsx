@@ -23,13 +23,13 @@ function About({ screenSize }: AboutProps) {
   return (
     <div id="services" className="mt-20 w-full">
       <div className="w-full flex flex-row items-center">
-        <div className="flex-1 flex flex-col h-fit lg:mr-6">
+        <div className="flex-2 flex flex-col h-fit lg:mr-6 lg:basis-2/3">
           <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-6 md:text-4xl">
             {t("title")}
           </h3>
           <p>{t("text")}</p>
           {screenSize >= 1024 && (
-            <div className="flex flex-row mt-12">
+            <div className="flex flex-row mt-12 gap-4">
               {typeof aboutText !== "undefined" &&
                 keys.map((key: string) => {
                   return (
@@ -45,7 +45,7 @@ function About({ screenSize }: AboutProps) {
           )}
         </div>
         {screenSize >= 700 && (
-          <div className="flex-1 m-6">
+          <div className="flex-1 w-fit basis-1/3">
             <Image
               src="/computer-about-me.png"
               alt="demo bla bla"
