@@ -2,17 +2,17 @@ import React from "react";
 import Image from "next/image";
 
 interface NavBurgerProps {
-  openMenu: boolean;
-  setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  openMenu: boolean | undefined;
+  toggleMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function NavBurger({ openMenu, setOpenMenu }: NavBurgerProps) {
+function NavBurger({ openMenu, toggleMenu }: NavBurgerProps) {
   return (
     <>
       <div className="flex-none">
         <button
           className="btn btn-square btn-ghost h-10 w-auto"
-          onClick={() => setOpenMenu((prev: boolean) => !prev)}
+          onClick={() => toggleMenu((prev: boolean) => !prev)}
         >
           {!openMenu ? (
             <Image

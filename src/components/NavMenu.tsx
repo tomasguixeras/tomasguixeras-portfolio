@@ -8,11 +8,11 @@ import Image from "next/image";
 import AboutButtons from "@/components/AboutButtons";
 
 interface NavMenuProps {
-  openMenu: boolean;
-  setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  openMenu: boolean | undefined;
+  toggleMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function NavMenu({ openMenu, setOpenMenu }: NavMenuProps) {
+function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
   const language = useLocale();
   const t = useTranslations("MobileNavbar");
   const navegation = ["services", "portfolio", "blog", "contact"] as const;
@@ -22,7 +22,7 @@ function NavMenu({ openMenu, setOpenMenu }: NavMenuProps) {
     <>
       {openMenu && (
         <div
-          onClick={() => setOpenMenu(!openMenu)}
+          onClick={() => toggleMenu(!openMenu)}
           className="w-11/12 h-[calc(100dvh-90px)] bg-[#242531] flex flex-col items-center justify-evenly z-10"
         >
           <div
@@ -33,7 +33,7 @@ function NavMenu({ openMenu, setOpenMenu }: NavMenuProps) {
             {navegation.map((link: string) => (
               <Link
                 key={link}
-                onClick={() => setOpenMenu(!openMenu)}
+                onClick={() => toggleMenu(!openMenu)}
                 href={t(`navegation.${link}.link`)}
                 className="py-4 w-full max-w-lg"
               >
@@ -68,7 +68,7 @@ function NavMenu({ openMenu, setOpenMenu }: NavMenuProps) {
               <button
                 className="btn btn-square btn-ghost h-10 w-auto"
                 onClick={() => {
-                  setOpenMenu(!openMenu);
+                  toggleMenu(!openMenu);
                 }}
               >
                 {language === "en" ? (
@@ -97,7 +97,7 @@ function NavMenu({ openMenu, setOpenMenu }: NavMenuProps) {
             <div>
               <button
                 className="btn btn-square btn-ghost h-10 w-auto"
-                onClick={() => setOpenMenu(!openMenu)}
+                onClick={() => toggleMenu(!openMenu)}
               >
                 {"DARK" === "DARK" ? (
                   <Image
