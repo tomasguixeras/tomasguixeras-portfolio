@@ -2,9 +2,10 @@
 <br/><br/>
 
 # Tomas Guixeras | Portfolio
-This web app was designed to give dog enthusiasts a minimalistic and good-looking website where to check stats of their favorite dog breeds.\
-Users have the possibility of creating their own dog breeds in case they are missing. These breeds are going to be stored in the database.\
-Also on the home page, they can look up for a specific breed by using the serchbar and filters, which act on the breeds from the external API together with the ones stored in the database.
+This project represents my personal portfolio developed with Next.js and styled using Tailwind CSS.\
+The current landing page showcases my contact information and a list of featured projects.\
+As it evolves, there are plans to incorporate detailed views for projects, a blog section, and the implementation of a light mode to enhance the user experience.
+
 
 
 The technological stack used for development was:
