@@ -11,7 +11,7 @@
         "key": "02",
         "name": "Portfolio",
         "slug": "portfolio",
-        "link": "/portfolio"
+        "link": "/#portfolio"
       },
       {
         "key": "03",
@@ -33,13 +33,13 @@
         "key": "01",
         "name": "Services",
         "slug": "services",
-        "link": "/services"
+        "link": "/#services"
       },
       "portfolio": {
         "key": "02",
         "name": "Portfolio",
         "slug": "portfolio",
-        "link": "/portfolio"
+        "link": "/#portfolio"
       },
       "blog": {
         "key": "03",

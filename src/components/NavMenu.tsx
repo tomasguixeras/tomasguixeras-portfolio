@@ -10,17 +10,9 @@ import AboutButtons from "@/components/AboutButtons";
 interface NavMenuProps {
   openMenu: boolean;
   setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
-  handleUserConfig: (toConfig: string) => void;
-  language: string;
-  theme: string;
 }
 
-function NavMenu({
-  openMenu,
-  setOpenMenu,
-  handleUserConfig,
-  theme,
-}: NavMenuProps) {
+function NavMenu({ openMenu, setOpenMenu }: NavMenuProps) {
   const language = useLocale();
   const t = useTranslations("MobileNavbar");
   const navegation = ["services", "portfolio", "blog", "contact"] as const;
@@ -36,7 +28,7 @@ function NavMenu({
           <div
             id="sections"
             className="flex flex-col items-center w-5/6 font-display text-xl italic"
-            onClick={() => handleUserConfig("userTheme")}
+            // onClick={() => handleUserConfig("userTheme")}
           >
             {navegation.map((link: string) => (
               <Link
@@ -52,7 +44,7 @@ function NavMenu({
 
           <div
             id="cta-button"
-            className="flex flex-col w-5/6 items-center p-7"
+            className="flex flex-col w-11/12 items-center p-7 gap-7"
             onClick={(e) => e.stopPropagation()}
           >
             {actions.map((action: string) => {
@@ -107,7 +99,7 @@ function NavMenu({
                 className="btn btn-square btn-ghost h-10 w-auto"
                 onClick={() => setOpenMenu(!openMenu)}
               >
-                {theme === "DARK" ? (
+                {"DARK" === "DARK" ? (
                   <Image
                     src="/color-schema/sun-light-mode.svg"
                     alt="Change language to Spanish"

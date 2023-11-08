@@ -34,7 +34,7 @@ function Projects({ screenSize }: projectsProps) {
   }, [screenSize]);
 
   return (
-    <div id="Portfolio-section" className="mt-20 w-full lg:mb-20">
+    <div id="portfolio" className="mt-20 w-full lg:mb-20">
       <>
         <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-[#FFC25C] text-transparent bg-clip-text w-fit mb-6 md:text-4xl lg:mb-10">
           {t("title")}

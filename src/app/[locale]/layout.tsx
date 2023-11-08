@@ -25,17 +25,17 @@ export const metadata: Metadata = {
   description:
     "Javascript / Typescript Fullstack Developer | React - Redux - Node Js - Express Js - Postgre SQL",
   alternates: {
-    canonical: "tomasguixeras.vercel.app",
+    canonical: "https://tomasguixeras.vercel.app/",
   },
 };
 
-export default async function RootLayout({
-  children,
-  params: { locale },
-}: any) {
-  // {
-  //   children: React.ReactNode;
-  // }
+type layoutProps = {
+  children: React.ReactNode;
+  params: { locale: string };
+};
+
+export default async function RootLayout({ children, params }: layoutProps) {
+  const { locale } = params;
   let messages;
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
@@ -44,7 +44,7 @@ export default async function RootLayout({
   }
   return (
     <html className={`${rubik.variable} ${roboto.variable}`} lang={locale}>
-      <body className="flex flex-col items-center font-body">
+      <body className="flex flex-col items-center font-body max-w-screen-2xl m-auto">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <NavBar />
           {children}

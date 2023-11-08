@@ -1,7 +1,7 @@
 <img src="https://res.cloudinary.com/tomyboohngs/image/upload/v1660682891/TomasBohnGs/Tomas_YW_h13vjb.png" width="100" align="right"/>
-<br/><br/><br/>
+<br/><br/>
 
-# Heny Dog App
+# Tomas Guixeras | Portfolio
 This web app was designed to give dog enthusiasts a minimalistic and good-looking website where to check stats of their favorite dog breeds.\
 Users have the possibility of creating their own dog breeds in case they are missing. These breeds are going to be stored in the database.\
 Also on the home page, they can look up for a specific breed by using the serchbar and filters, which act on the breeds from the external API together with the ones stored in the database.
