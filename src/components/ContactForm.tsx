@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { contactFormTexts } from "@/types/json-data/footer-links";
 import { useTranslations } from "next-intl";
@@ -11,7 +11,21 @@ interface formProps {
 function ContactForm() {
   const form = useRef<any>();
   const t = useTranslations("Footer.contactForm");
+  const initialState = {
+    name: "",
+    email: "",
+    message: "",
+  };
+  const [inputs, setInputs] = useState(initialState);
 
+  function onContactFormChange(event: any) {
+    const { name, value } = event.target;
+
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
+  }
   const sendEmail = (event: any) => {
     event.preventDefault();
 
@@ -25,6 +39,7 @@ function ContactForm() {
       .then(
         (result) => {
           console.log(result.text);
+          setInputs(initialState)
         },
         (error) => {
           console.log(error.text);
@@ -40,6 +55,8 @@ function ContactForm() {
               {t("formTexts.nameInput.label")}
             </label>
             <input
+              value={inputs.name}
+              onChange={onContactFormChange}
               name="name"
               type="text"
               placeholder={t("formTexts.nameInput.placeholder")}
@@ -51,6 +68,8 @@ function ContactForm() {
               {t("formTexts.emailInput.label")}
             </label>
             <input
+              value={inputs.email}
+              onChange={onContactFormChange}
               placeholder={t("formTexts.emailInput.placeholder")}
               className="box-border w-full bg-transparent border-2 rounded-lg p-1 lg:w-52"
               type="text"
@@ -63,6 +82,8 @@ function ContactForm() {
             {t("formTexts.textInput.label")}
           </label>
           <textarea
+            value={inputs.message}
+            onChange={onContactFormChange}
             placeholder={t("formTexts.textInput.placeholder")}
             className="bg-transparent border-2 rounded-lg p-1 lg:w-full"
             name="message"
