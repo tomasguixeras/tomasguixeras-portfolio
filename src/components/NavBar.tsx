@@ -20,7 +20,7 @@ function NavBar() {
     };
     window.addEventListener("resize", handleResize);
     setCurrentWidth(window.innerWidth);
-    localStorage.setItem("screen-size", window.innerWidth.toString());
+    localStorage?.setItem("screen-size", window.innerWidth.toString());
 
     return () => {
       window.removeEventListener("resize", handleResize);
