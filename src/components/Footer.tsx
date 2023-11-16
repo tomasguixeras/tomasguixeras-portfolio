@@ -10,17 +10,10 @@ import { languageValidator } from "@/utils/languageValidator";
 import { footerTexts } from "@/types/json-data/footer-links";
 
 import links from "@/data/external-links.json";
-import footerText from "@/data/footer-texts.json";
 import { useTranslations } from "next-intl";
 
 function Footer() {
   const t = useTranslations("Footer");
-  // const keys = ["calendly", "curriculum"] as const;
-
-  // const [texts, setTexts] = useState<footerTexts | undefined>();
-  // useEffect(() => {
-  //   setTexts(languageValidator(footerText) as footerTexts);
-  // }, [texts]);
 
   const mainButtons = links.slice(0, 4);
   const iconButtons = links.slice(4, links.length);

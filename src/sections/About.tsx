@@ -4,7 +4,7 @@ import Image from "next/image";
 import AboutButtons from "@/components/AboutButtons";
 import { languageValidator } from "@/utils/languageValidator";
 import { AboutInterface, AboutTexts } from "@/types/json-data/about-types";
-import aboutData from "@/data/about-texts.json";
+// import aboutData from "@/data/about-texts.json";
 import { useTranslations } from "next-intl";
 
 interface AboutProps {
@@ -16,9 +16,9 @@ function About({ screenSize }: AboutProps) {
   const keys = ["calendly", "curriculum"] as const;
   const [aboutText, setAboutText] = useState<AboutTexts>();
 
-  useEffect(() => {
-    setAboutText(languageValidator(aboutData as AboutInterface) as AboutTexts);
-  }, []);
+  // useEffect(() => {
+  //   setAboutText(languageValidator(aboutData as AboutInterface) as AboutTexts);
+  // }, []);
 
   return (
     <div id="services" className="mt-20 w-full">
