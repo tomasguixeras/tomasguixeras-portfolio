@@ -8,7 +8,7 @@ export const useMenu = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(initial);
 
   useEffect(() => {
-    localStorage.setItem("openMenu_V1", JSON.stringify(openMenu));
+    localStorage?.setItem("openMenu_V1", JSON.stringify(openMenu));
   }, [openMenu]);
 
   return { openMenu, toggleMenu: () => setOpenMenu((prev) => !prev) };
