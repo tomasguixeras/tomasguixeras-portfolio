@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { useTheme } from "next-themes";
 
@@ -18,8 +19,8 @@ function NavBurger({ openMenu, toggleMenu }: NavBurgerProps) {
         >
           {!openMenu ? (
             <svg
-              width="40px"
-              height="40px"
+              width="30px"
+              height="30px"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -37,8 +38,8 @@ function NavBurger({ openMenu, toggleMenu }: NavBurgerProps) {
             </svg>
           ) : (
             <svg
-              width="40px"
-              height="40px"
+              width="30px"
+              height="30px"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

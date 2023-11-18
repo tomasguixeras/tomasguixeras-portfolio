@@ -24,12 +24,11 @@ function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
       {openMenu && (
         <div
           onClick={() => toggleMenu(!openMenu)}
-          className="w-11/12 h-[calc(100dvh-90px)] bg-[#242531] flex flex-col items-center justify-evenly z-10"
+          className="w-11/12 h-[calc(100dvh-90px)] dark:bg-[#242531] flex flex-col items-center justify-evenly z-10"
         >
           <div
             id="sections"
             className="flex flex-col items-center w-5/6 font-display text-xl italic"
-            // onClick={() => handleUserConfig("userTheme")}
           >
             {navegation.map((link: string) => (
               <Link
