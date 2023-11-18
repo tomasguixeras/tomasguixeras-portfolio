@@ -6,7 +6,7 @@ function IconButton({ icon, url }: iconButtonType) {
   return (
     <a
       href={url}
-      className="flex items-center justify-center border-2 border-[#242531] w-12 h-12 rounded-full m-2 hover:rotate-45 hover:duration-300 hover:shadow-inner hover:shadow-white dark:border-[#f4f2ee]"
+      className="flex items-center justify-center border-2 border-black dark:border-white w-12 h-12 rounded-full m-2 hover:rotate-45 hover:duration-300 hover:shadow-inner hover:shadow-white"
     >
       <Image
         src={`/social-icons/${icon}`}

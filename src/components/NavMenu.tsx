@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import NextLink from "next-intl/link";
 import Image from "next/image";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 import AboutButtons from "@/components/AboutButtons";
 
@@ -99,23 +100,7 @@ function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
                 className="btn btn-square btn-ghost h-10 w-auto"
                 onClick={() => toggleMenu(!openMenu)}
               >
-                {"DARK" === "DARK" ? (
-                  <Image
-                    src="/color-schema/sun-light-mode.svg"
-                    alt="Change language to Spanish"
-                    height={20}
-                    width={20}
-                    className="h-8 w-8"
-                  />
-                ) : (
-                  <Image
-                    src="/color-schema/moon-dark-mode.svg"
-                    alt="Change language to English"
-                    height={20}
-                    width={20}
-                    className="h-8 w-8"
-                  />
-                )}
+                <ThemeSwitcher />
               </button>
             </div>
           </div>

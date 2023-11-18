@@ -39,7 +39,7 @@ function ContactForm() {
       .then(
         (result) => {
           console.log(result.text);
-          setInputs(initialState)
+          setInputs(initialState);
         },
         (error) => {
           console.log(error.text);
@@ -60,7 +60,7 @@ function ContactForm() {
               name="name"
               type="text"
               placeholder={t("formTexts.nameInput.placeholder")}
-              className="box-border w-full bg-transparent border-2 rounded-lg p-1 lg:w-52"
+              className="border-black focus:ring-blue-500 focus:border-blue-500 dark:border-white box-border w-full bg-transparent border-2 rounded-lg p-1 lg:w-52"
             />
           </div>
           <div className="flex-1 flex flex-col ml-1">
@@ -71,7 +71,7 @@ function ContactForm() {
               value={inputs.email}
               onChange={onContactFormChange}
               placeholder={t("formTexts.emailInput.placeholder")}
-              className="box-border w-full bg-transparent border-2 rounded-lg p-1 lg:w-52"
+              className="border-black focus:ring-blue-500 focus:border-blue-500 dark:border-white box-border w-full bg-transparent border-2 rounded-lg p-1 lg:w-52"
               type="text"
               name="email"
             />
@@ -85,7 +85,7 @@ function ContactForm() {
             value={inputs.message}
             onChange={onContactFormChange}
             placeholder={t("formTexts.textInput.placeholder")}
-            className="bg-transparent border-2 rounded-lg p-1 lg:w-full"
+            className="border-black focus:ring-blue-500 focus:border-blue-500 dark:border-white bg-transparent border-2 rounded-lg p-1 lg:w-full"
             name="message"
             cols={30}
             rows={5}
@@ -93,7 +93,7 @@ function ContactForm() {
         </div>
         <button
           type="submit"
-          className="bg-[#FFC25C] py-2 px-4 w-40 m-4 rounded-full text-[#333544] md:text-xl md:font-semibold md:w-60 md:py-2 hover:shadow-md hover:shadow-amber-400"
+          className="bg-[#242531] dark:bg-[#FFC25C] py-2 px-4 w-40 m-4 rounded-full text-white dark:text-[#333544] md:text-xl md:font-semibold md:w-60 md:py-2 hover:shadow-md hover:shadow-amber-400"
         >
           {t("formTexts.sendForm")}
         </button>

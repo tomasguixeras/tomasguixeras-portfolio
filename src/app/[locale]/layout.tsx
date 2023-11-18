@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Rubik, Roboto_Mono } from "next/font/google";
 
 import NavBar from "@/components/NavBar";
+import Provider from "@/components/Provider";
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "es" }];
@@ -44,11 +45,13 @@ export default async function RootLayout({ children, params }: layoutProps) {
   }
   return (
     <html className={`${rubik.variable} ${roboto.variable}`} lang={locale}>
-      <body className="flex flex-col items-center font-body max-w-screen-2xl m-auto">
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <NavBar />
-          {children}
-        </NextIntlClientProvider>
+      <body className="flex flex-col items-center font-body max-w-screen-2xl m-auto bg-white text-black dark:bg-[#242531] dark:text-white">
+        <Provider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <NavBar />
+            {children}
+          </NextIntlClientProvider>
+        </Provider>
       </body>
     </html>
   );
