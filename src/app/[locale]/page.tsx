@@ -57,6 +57,7 @@ export default function Home() {
                     return (
                       <IconButton
                         key={button.slug}
+                        name={button.name}
                         icon={button.icon}
                         url={button.url}
                       />
