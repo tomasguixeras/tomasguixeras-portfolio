@@ -13,7 +13,7 @@ function IconButton({ name, url }: iconButtonType) {
   return (
     <a
       href={url}
-      className="flex items-center justify-center border-2 border-black dark:border-white w-12 h-12 rounded-full m-2 hover:rotate-45 hover:duration-300 hover:shadow-inner hover:shadow-white"
+      className="flex items-center justify-center border-2 border-black dark:border-white w-12 h-12 rounded-full m-2 hover:rotate-45 hover:duration-300 hover:shadow-inner hover:shadow-black dark:hover:shadow-white"
     >
       {name === "LinkedIn" && <LinkedIn />}
       {name === "Github" && <GitHub />}

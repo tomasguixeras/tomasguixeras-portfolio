@@ -55,7 +55,7 @@ function Projects({ screenSize }: projectsProps) {
             })}
         </div>
         <Link
-          className="underline pl-2 md:text-xl hover:text-slate-200 hover:drop-shadow-white"
+          className="underline pl-2 md:text-xl hover:text-slate-600 dark:hover:text-slate-200 "
           href="/portfolio"
         >
           {t("moreProjects")}

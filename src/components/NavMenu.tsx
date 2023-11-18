@@ -35,7 +35,7 @@ function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
                 key={link}
                 onClick={() => toggleMenu(!openMenu)}
                 href={t(`navegation.${link}.link`)}
-                className="py-4 w-full max-w-lg"
+                className="py-4 w-full max-w-lg hover:text-slate-600 dark:hover:text-[#FFC25C]"
               >
                 {t(`navegation.${link}.name`)}
               </Link>
@@ -66,7 +66,7 @@ function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
           >
             <div>
               <button
-                className="btn btn-square btn-ghost h-10 w-auto"
+                className="flex items-center justify-center h-14 w-14 rounded-full hover:shadow hover:shadow-slate-700 dark:hover:shadow-slate-200"
                 onClick={() => {
                   toggleMenu(!openMenu);
                 }}
@@ -96,7 +96,7 @@ function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
             </div>
             <div>
               <button
-                className="btn btn-square btn-ghost h-10 w-auto"
+                className="flex items-center justify-center h-14 w-14 rounded-full hover:shadow hover:shadow-slate-700 dark:hover:shadow-slate-200"
                 onClick={() => toggleMenu(!openMenu)}
               >
                 <ThemeSwitcher />

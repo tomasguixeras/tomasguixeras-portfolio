@@ -1,4 +1,3 @@
-// "use client";
 import React from "react";
 import { useTranslations } from "next-intl";
 
@@ -64,7 +63,7 @@ function Footer() {
       <hr className="border-black dark:border-white w-5/6" />
       <h6 className="text-sm pt-2 pb-4 lg:pb-6 lg:pt-8 lg:text-base">
         {t("signing")}
-        <a href="https://www.github.com/tomasguixeras"> Tomas Guixeras</a>
+        <a href="https://www.github.com/tomasguixeras" className="underline dark:no-underline dark:text-[#FFC25C]">Tomas Guixeras</a>
       </h6>
     </footer>
   );

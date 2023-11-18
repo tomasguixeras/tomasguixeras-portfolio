@@ -60,7 +60,7 @@ function ContactForm() {
               name="name"
               type="text"
               placeholder={t("formTexts.nameInput.placeholder")}
-              className="border-black focus:ring-blue-500 focus:border-blue-500 dark:border-white box-border w-full bg-transparent border-2 rounded-lg p-1 lg:w-52"
+              className="border-black focus:ring-gray-500 focus:border-gray-500 dark:border-white dark:focus:ring-[#FFC25C] dark:focus:border-[#FFC25C] box-border w-full bg-transparent border-2 rounded-lg p-1 lg:w-52"
             />
           </div>
           <div className="flex-1 flex flex-col ml-1">
@@ -71,7 +71,7 @@ function ContactForm() {
               value={inputs.email}
               onChange={onContactFormChange}
               placeholder={t("formTexts.emailInput.placeholder")}
-              className="border-black focus:ring-blue-500 focus:border-blue-500 dark:border-white box-border w-full bg-transparent border-2 rounded-lg p-1 lg:w-52"
+              className="border-black focus:ring-gray-500 focus:border-gray-500 dark:border-white dark:focus:ring-[#FFC25C] dark:focus:border-[#FFC25C] box-border w-full bg-transparent border-2 rounded-lg p-1 lg:w-52"
               type="text"
               name="email"
             />
@@ -85,7 +85,7 @@ function ContactForm() {
             value={inputs.message}
             onChange={onContactFormChange}
             placeholder={t("formTexts.textInput.placeholder")}
-            className="border-black focus:ring-blue-500 focus:border-blue-500 dark:border-white bg-transparent border-2 rounded-lg p-1 lg:w-full"
+            className="border-black focus:ring-gray-500 focus:border-gray-500 dark:border-white dark:focus:ring-[#FFC25C] dark:focus:border-[#FFC25C] bg-transparent border-2 rounded-lg p-1 lg:w-full"
             name="message"
             cols={30}
             rows={5}
