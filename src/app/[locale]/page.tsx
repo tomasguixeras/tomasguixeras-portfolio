@@ -10,8 +10,10 @@ import IconButton from "@/components/IconButton";
 import Technologies from "@/components/Technologies";
 
 import links from "@/data/external-links.json";
+import { useTheme } from "next-themes";
 
 export default function Home() {
+  const { theme } = useTheme();
   const { openMenu } = useMenu();
 
   const [screenSize, setScreenSize] = useState<number>(0);
@@ -36,7 +38,9 @@ export default function Home() {
             >
               <Image
                 alt="Tomas Bohn Guixeras profile picture"
-                src="/tomas-hero-sin-fondo.png"
+                src={
+                  theme === "dark" ? "/mainDarkImg.png" : "/mainLightImg.png"
+                }
                 draggable="false"
                 height={500}
                 width={500}
