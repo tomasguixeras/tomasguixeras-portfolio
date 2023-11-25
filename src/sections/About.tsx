@@ -35,7 +35,7 @@ function About({ screenSize }: AboutProps) {
             </div>
           )}
         </div>
-        {screenSize >= 700 && (
+        {screenSize >= 1024 && (
           <div className="flex-1 w-fit basis-1/3">
             <Image
               src="/computer-about-me.png"
