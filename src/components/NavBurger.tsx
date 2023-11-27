@@ -1,37 +1,62 @@
+"use client";
 import React from "react";
-import Image from "next/image";
+import { useTheme } from "next-themes";
 
 interface NavBurgerProps {
-  openMenu: boolean;
-  setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  openMenu: boolean | undefined;
+  toggleMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function NavBurger({ openMenu, setOpenMenu }: NavBurgerProps) {
+function NavBurger({ openMenu, toggleMenu }: NavBurgerProps) {
+  const { theme } = useTheme();
+
   return (
     <>
       <div className="flex-none">
-        <button
+        <div
           className="btn btn-square btn-ghost h-10 w-auto"
-          onClick={() => setOpenMenu((prev: boolean) => !prev)}
+          onClick={() => toggleMenu((prev: boolean) => !prev)}
         >
           {!openMenu ? (
-            <Image
-              src="/icons/burger.svg"
-              alt="Open menu icon"
-              height={40}
-              width={40}
-              className="h-8 w-8 md:h-12 md:w-12"
-            />
+            <svg
+              width="30px"
+              height="30px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Menu / Hamburger_LG">
+                <path
+                  id="Vector"
+                  d="M3 17H21M3 12H21M3 7H21"
+                  stroke={theme === "dark" ? "#FFFFFF" : "#000000"}
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </g>
+            </svg>
           ) : (
-            <Image
-              src="/icons/close.svg"
-              alt="Open menu icon"
-              height={40}
-              width={40}
-              className="h-8 w-8 md:h-12 md:w-12"
-            />
+            <svg
+              width="30px"
+              height="30px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Menu / Close_MD">
+                <path
+                  id="Vector"
+                  d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18"
+                  stroke={theme === "dark" ? "#FFFFFF" : "#000000"}
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </g>
+            </svg>
           )}
-        </button>
+        </div>
       </div>
     </>
   );

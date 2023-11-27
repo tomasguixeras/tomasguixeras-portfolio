@@ -5,7 +5,7 @@ import { projectsInfo } from "@/types/projects";
 function ProjectCard({ name, description, image, link }: projectsInfo) {
   return (
     <a href={link} className="mb-2 cursor-pointer">
-      <div className={"border w-full rounded-lg overflow-hidden"}>
+      <div className={"w-full rounded-lg overflow-hidden hover:shadow-md dark:shadow-gray-700"}>
         <Image
           src={image}
           alt="demo"

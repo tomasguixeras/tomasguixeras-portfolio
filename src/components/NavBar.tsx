@@ -7,19 +7,20 @@ import DesktopMenu from "@/components/DesktopMenu";
 import DesktopCTA from "@/components/DesktopCTA";
 import NavBurger from "@/components/NavBurger";
 import NavMenu from "@/components/NavMenu";
+import { useMenu } from "@/utils/useMenu";
 
 function NavBar() {
   const [userSelectedPage, setUserSelectedPage] = useState<string>("");
-  const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const [currentWidth, setCurrentWidth] = useState<number>(0);
+  const { openMenu, toggleMenu } = useMenu();
 
+  const [currentWidth, setCurrentWidth] = useState<number>(0);
   useEffect(() => {
     const handleResize = () => {
       setCurrentWidth(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
     setCurrentWidth(window.innerWidth);
-    localStorage.setItem("screen-size", window.innerWidth.toString());
+    localStorage?.setItem("screen-size", window.innerWidth.toString());
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -53,10 +54,10 @@ function NavBar() {
             <DesktopCTA />
           </>
         ) : (
-          <NavBurger openMenu={openMenu} setOpenMenu={setOpenMenu} />
+          <NavBurger openMenu={openMenu} toggleMenu={toggleMenu} />
         )}
       </div>
-      <NavMenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
+      <NavMenu openMenu={openMenu} toggleMenu={toggleMenu} />
     </>
   );
 }

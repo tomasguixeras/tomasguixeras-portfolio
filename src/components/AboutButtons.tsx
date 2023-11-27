@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React from "react";
+import { Calendly } from "./SVGs/Calendly";
+import { Curriculum } from "./SVGs/Curriculum";
 
 interface AboutButtonsProps {
   icon: string;
@@ -12,15 +14,12 @@ function AboutButtons({ icon, title, url }: AboutButtonsProps) {
     <a
       target="_blank"
       href={url}
-      className="w-full max-w-md border-2 rounded-full flex items-center justify-center py-3 px-3 relative lg:text-lg hover:shadow hover:shadow-slate-300"
+      className="w-full max-w-md border-2 border-black dark:border-white rounded-full flex items-center justify-center py-3 px-3 relative lg:text-lg hover:shadow hover:shadow-slate-700 dark:hover:shadow-slate-300"
     >
-      <Image
-        src={`/social-icons/${icon}-logo.svg`}
-        width={20}
-        height={20}
-        alt="demo social media icons"
-        className="mr-4"
-      />
+      <div className="mr-4">
+        {icon === "calendly" && <Calendly />}
+        {icon === "curriculum" && <Curriculum />}
+      </div>
       <p>{`${title}`}</p>
     </a>
   );

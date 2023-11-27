@@ -24,7 +24,7 @@ function DesktopMenu({
             href={t(`navegation.${link}.link`)}
             className={
               userSelectedPage === t(`navegation.${link}.slug`)
-                ? "text-yellow-400 drop-shadow-xl italic"
+                ? "dark:text-[#FFC25C] drop-shadow-xl italic"
                 : ""
             }
           >

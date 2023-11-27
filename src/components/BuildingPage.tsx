@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -14,18 +14,16 @@ function BuildingPage() {
           <p className="my-2 text-center">{t("subTitle")}</p>
         </div>
 
-        <p className="mt-20 italic font-semibold">
-          {t("moreInfo")}
-        </p>
+        <p className="mt-20 italic font-semibold">{t("moreInfo")}</p>
         <div className="h-14 flex items-center justify-center mt-2">
           <Link
-            className="border-2 px-4 py-2 m-2 rounded-full text-md font-semibold"
+            className="border-2 border-black dark:border-white px-4 py-2 m-2 rounded-full text-md font-semibold"
             href="/#contact"
           >
             {t("contact")}
           </Link>
           <Link
-            className="border-2 px-4 py-2 m-2 rounded-full text-md font-semibold"
+            className="border-2 border-black dark:border-white px-4 py-2 m-2 rounded-full text-md font-semibold"
             href={"/"}
           >
             {t("goHome")}

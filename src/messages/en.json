@@ -94,14 +94,14 @@
         "id": "1",
         "name": "Henry Dog App",
         "description": "Fullstack PERN App",
-        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1695898766/5_gy07fm.png",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1700156595/Under_cxr5tc.webp",
         "link": "https://github.com/tomasguixeras/PI-Dogs-App"
       },
       "MarketsCenter": {
         "id": "2",
         "name": "Markets Center",
         "description": "Fullstack MERN App",
-        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1695898765/6_bflmsl.png",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1700155078/Under_rltait.webp",
         "link": "https://github.com/tomasguixeras/markets-center-client"
       },
       "42iCripto": {
@@ -115,7 +115,7 @@
         "id": "4",
         "name": "UI Color Tester",
         "description": "Frontend Vite App",
-        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1699468436/3_fk9do8.png",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1700153938/color-selector_qwlt0l.webp",
         "link": "https://github.com/tomasguixeras/color-selector"
       },
       "reverseWords": {
@@ -129,14 +129,14 @@
         "id": "7",
         "name": "Tomas Guixeras | Portfolio",
         "description": "Profesional portfolio on Next Js",
-        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1695898766/2_qnbysr.png",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1700150176/Mockup_cns23y.webp",
         "link": "https://github.com/tomasguixeras/tomasguixeras-portfolio"
       },
       "gamePlugins": {
         "id": "5",
         "name": "Gatien Salaun",
         "description": "Landing Page",
-        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1695898766/4_mqgtd7.png",
+        "image": "https://res.cloudinary.com/tomyboohngs/image/upload/v1700156278/Under_wahve1.webp",
         "link": "https://github.com/tomasguixeras/luxury-presence-landing"
       }
     },
@@ -165,7 +165,7 @@
         "sendForm": "Send Message"
       }
     },
-    "signing": "Developed by"
+    "signing": "Developed by "
   },
   "UnderWork": {
     "title": "We are working on this view.",
