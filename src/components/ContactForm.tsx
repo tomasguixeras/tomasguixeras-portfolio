@@ -93,7 +93,7 @@ function ContactForm() {
         </div>
         <button
           type="submit"
-          className="bg-[#242531] dark:bg-[#FFC25C] py-2 px-4 w-40 m-4 rounded-full text-white dark:text-[#333544] md:text-xl md:font-semibold md:w-60 md:py-2 hover:shadow-md hover:shadow-amber-400"
+          className="bg-[#242531] dark:bg-[#FFC25C] py-4 px-6 m-4 rounded-full text-white dark:text-[#333544] md:text-lg md:px-7 hover:shadow-md hover:opacity-90"
         >
           {t("formTexts.sendForm")}
         </button>
