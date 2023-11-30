@@ -11,7 +11,7 @@ import AboutButtons from "@/components/AboutButtons";
 
 interface NavMenuProps {
   openMenu: boolean | undefined;
-  toggleMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleMenu: () => void;
 }
 
 function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
@@ -33,7 +33,7 @@ function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
     <>
       {openMenu && (
         <div
-          onClick={() => toggleMenu(!openMenu)}
+          onClick={() => toggleMenu()}
           className="w-11/12 h-[calc(100dvh-90px)] dark:bg-[#242531] flex flex-col items-center justify-evenly z-10"
         >
           <div
@@ -50,14 +50,6 @@ function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
               >
                 {t(`navegation.${link}.name`)}
               </p>
-              // <Link
-              //   key={link}
-              //   onClick={() => toggleMenu((prev: boolean) => !prev)}
-              //   href={t(`navegation.${link}.link`)}
-              //   className="py-4 w-full max-w-lg hover:text-slate-600 dark:hover:text-[#FFC25C]"
-              // >
-              //   {t(`navegation.${link}.name`)}
-              // </Link>
             ))}
           </div>
 
@@ -87,7 +79,7 @@ function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
               <button
                 className="flex items-center justify-center h-14 w-14 rounded-full hover:shadow hover:shadow-slate-700 dark:hover:shadow-slate-200"
                 onClick={() => {
-                  toggleMenu(!openMenu);
+                  toggleMenu();
                 }}
               >
                 {language === "en" ? (
@@ -116,7 +108,7 @@ function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
             <div>
               <button
                 className="flex items-center justify-center h-14 w-14 rounded-full hover:shadow hover:shadow-slate-700 dark:hover:shadow-slate-200"
-                onClick={() => toggleMenu(!openMenu)}
+                onClick={() => toggleMenu()}
               >
                 <ThemeSwitcher />
               </button>
