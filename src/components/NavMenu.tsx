@@ -5,25 +5,35 @@ import { useLocale, useTranslations } from "next-intl";
 import NextLink from "next-intl/link";
 import Image from "next/image";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import { useRouter } from "next/navigation";
 
 import AboutButtons from "@/components/AboutButtons";
 
 interface NavMenuProps {
   openMenu: boolean | undefined;
-  toggleMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleMenu: () => void;
 }
 
 function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
+  const router = useRouter();
   const language = useLocale();
   const t = useTranslations("MobileNavbar");
   const navegation = ["services", "portfolio", "blog", "contact"] as const;
   const actions = ["calendly", "curriculum"] as const;
 
+  const handleClick = (
+    event: React.MouseEvent<HTMLParagraphElement, MouseEvent>,
+    path: string
+  ) => {
+    event.preventDefault();
+    router.push(path);
+  };
+
   return (
     <>
       {openMenu && (
         <div
-          onClick={() => toggleMenu(!openMenu)}
+          onClick={() => toggleMenu()}
           className="w-11/12 h-[calc(100dvh-90px)] dark:bg-[#242531] flex flex-col items-center justify-evenly z-10"
         >
           <div
@@ -31,14 +41,15 @@ function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
             className="flex flex-col items-center w-5/6 font-display text-xl italic"
           >
             {navegation.map((link: string) => (
-              <Link
+              <p
                 key={link}
-                onClick={() => toggleMenu(!openMenu)}
-                href={t(`navegation.${link}.link`)}
+                onClick={(event) =>
+                  handleClick(event, t(`navegation.${link}.link`))
+                }
                 className="py-4 w-full max-w-lg hover:text-slate-600 dark:hover:text-[#FFC25C]"
               >
                 {t(`navegation.${link}.name`)}
-              </Link>
+              </p>
             ))}
           </div>
 
@@ -68,7 +79,7 @@ function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
               <button
                 className="flex items-center justify-center h-14 w-14 rounded-full hover:shadow hover:shadow-slate-700 dark:hover:shadow-slate-200"
                 onClick={() => {
-                  toggleMenu(!openMenu);
+                  toggleMenu();
                 }}
               >
                 {language === "en" ? (
@@ -97,7 +108,7 @@ function NavMenu({ openMenu, toggleMenu }: NavMenuProps) {
             <div>
               <button
                 className="flex items-center justify-center h-14 w-14 rounded-full hover:shadow hover:shadow-slate-700 dark:hover:shadow-slate-200"
-                onClick={() => toggleMenu(!openMenu)}
+                onClick={() => toggleMenu()}
               >
                 <ThemeSwitcher />
               </button>

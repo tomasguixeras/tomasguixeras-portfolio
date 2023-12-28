@@ -10,6 +10,7 @@ import NavMenu from "@/components/NavMenu";
 import { useMenu } from "@/utils/useMenu";
 
 function NavBar() {
+  // TODO: Change type string to enum ("/", "/services", "/portafolio", "/blog", "/contact")
   const [userSelectedPage, setUserSelectedPage] = useState<string>("");
   const { openMenu, toggleMenu } = useMenu();
 
@@ -33,7 +34,10 @@ function NavBar() {
         <div className="flex-1 lg:flex-none">
           <Link
             href="/"
-            onClick={() => setUserSelectedPage("")}
+            onClick={() => {
+              setUserSelectedPage("")
+              openMenu === true && toggleMenu();
+            }}
             className="btn btn-ghost normal-case text-xl"
           >
             <Image
