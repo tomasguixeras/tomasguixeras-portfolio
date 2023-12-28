@@ -17,9 +17,7 @@ export const ThemeSwitcher = () => {
   const renderThemeChanger = () => {
     if (!mounted) return null;
 
-    const currentTheme = theme === "system" ? systemTheme : theme;
-
-    if (currentTheme === "dark") {
+    if (theme === "dark") {
       return (
         <svg
           width="30px"
