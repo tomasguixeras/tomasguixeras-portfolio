@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <>
       {!openMenu && (
-        <div className="flex flex-col justify-center items-center w-full max-w-screen-2xl p-0 m-0 overflow-hidden">
+        <div className="flex flex-col justify-center items-center w-full max-w-screen-2xl p-0 m-0 overflow-hidden mt-[90px]">
           <main
             id="container"
             className="w-5/6 flex flex-col justify-center items-center"

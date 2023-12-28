@@ -30,36 +30,38 @@ function NavBar() {
 
   return (
     <>
-      <div className="navbar bg-base-100 w-5/6 flex items-center justify-between relative h-[90px]">
-        <div className="flex-1 lg:flex-none">
-          <Link
-            href="/"
-            onClick={() => {
-              setUserSelectedPage("")
-              openMenu === true && toggleMenu();
-            }}
-            className="btn btn-ghost normal-case text-xl"
-          >
-            <Image
-              src="/Logo.png"
-              alt="Tomas Bohn Guixeras Logo"
-              height={70}
-              width={70}
-              className="h-12 w-auto md:h-16 lg:h-10"
-            />
-          </Link>
+      <div className="fixed w-full flex justify-center bg-white dark:bg-[#242531] z-10">
+        <div className="w-5/6 flex items-center justify-between h-[90px]">
+          <div className="flex-1 lg:flex-none">
+            <Link
+              href="/"
+              onClick={() => {
+                setUserSelectedPage("");
+                openMenu === true && toggleMenu();
+              }}
+              className="btn btn-ghost normal-case text-xl"
+            >
+              <Image
+                src="/Logo.png"
+                alt="Tomas Bohn Guixeras Logo"
+                height={70}
+                width={70}
+                className="h-12 w-auto md:h-16 lg:h-10"
+              />
+            </Link>
+          </div>
+          {currentWidth >= 1024 ? (
+            <>
+              <DesktopMenu
+                userSelectedPage={userSelectedPage}
+                setUserSelectedPage={setUserSelectedPage}
+              />
+              <DesktopCTA />
+            </>
+          ) : (
+            <NavBurger openMenu={openMenu} toggleMenu={toggleMenu} />
+          )}
         </div>
-        {currentWidth >= 1024 ? (
-          <>
-            <DesktopMenu
-              userSelectedPage={userSelectedPage}
-              setUserSelectedPage={setUserSelectedPage}
-            />
-            <DesktopCTA />
-          </>
-        ) : (
-          <NavBurger openMenu={openMenu} toggleMenu={toggleMenu} />
-        )}
       </div>
       <NavMenu openMenu={openMenu} toggleMenu={toggleMenu} />
     </>
