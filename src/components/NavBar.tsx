@@ -35,7 +35,7 @@ function NavBar() {
           <Link
             href="/"
             onClick={() => {
-              setUserSelectedPage("")
+              setUserSelectedPage("");
               openMenu === true && toggleMenu();
             }}
             className="btn btn-ghost normal-case text-xl"
@@ -45,7 +45,7 @@ function NavBar() {
               alt="Tomas Bohn Guixeras Logo"
               height={70}
               width={70}
-              className="h-12 w-auto md:h-16 lg:h-10"
+              className="h-6 w-auto md:h-8 lg:h-8"
             />
           </Link>
         </div>

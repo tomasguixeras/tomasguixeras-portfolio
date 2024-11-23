@@ -25,7 +25,7 @@ function SocialButton({ title, url }: socialButtonType) {
         {title === "Mail" && <Mail />}
       </div>
 
-      {`${title}`}
+      {title}
     </a>
   );
 }
